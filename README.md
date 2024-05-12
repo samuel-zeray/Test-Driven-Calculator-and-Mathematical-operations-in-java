@@ -1,2 +1,7 @@
-# Encrypt-Your-Data
-This  is a java application that Encrypts any Text with different types of Encryption algorithm
+# calculator with functionalities of
+basic calculator and other mathematics operations
+
+
+
+
+
