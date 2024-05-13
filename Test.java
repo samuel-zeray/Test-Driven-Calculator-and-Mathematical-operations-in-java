@@ -80,27 +80,27 @@ public class Test {
         p.calculateCombination(2, 3);
     }
 
-           //power
+            //power
 
   @Test
     public void testPower() {
         assertEquals(8.0, p.power(2.0, 3.0)); 
     }
 
-           //squarRoot 
+            //squarRoot 
     @Test
     public void testSquareRoot() {
         assertEquals(2.0, p.squareRoot(4.0)); 
     }
 
-       //logarithm 
+        //logarithm 
     @Test
     public void testLogarithm() {
         assertEquals(2.0, p.logarithm(100.0)); // log10(100) = 2
     }
 
 
-     //naturalLogarithm 
+      //naturalLogarithm 
     @Test
     public void testNaturalLogarithm() {
         assertEquals(1.6094379124341003, p.naturalLogarithm(5.0)); // ln(5) = 1.609
