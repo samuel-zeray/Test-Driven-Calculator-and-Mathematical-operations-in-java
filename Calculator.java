@@ -1,4 +1,4 @@
-
+i it
 public class Calculator {
     
                 //Factorial
@@ -52,18 +52,27 @@ public class Calculator {
         }
         return factorial;
     }
+
+
+           //Power
     public double power(double base, double exponent) {
         return Math.pow(base, exponent);
     }
 
-    public double squareRoot(double value) {
+
+           //squarRoot
+  public double squareRoot(double value) {
         return Math.sqrt(value);
     }
 
+
+            //logarithm
     public double logarithm(double value) {
         return Math.log10(value);
     }
 
+
+         //natural logarithm
     public double naturalLogarithm(double value) {
         return Math.log(value);
     }
