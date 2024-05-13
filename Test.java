@@ -82,25 +82,25 @@ public class Test {
 
   @Test
     public void testPower() {
-        MathCalculator calculator = new MathCalculator();
-        assertEquals(8.0, calculator.power(2.0, 3.0), DELTA); // 2^3 = 8
+        MathCalculator p = new MathCalculator();
+        assertEquals(8.0, p.power(2.0, 3.0)); 
     }
 
     @Test
     public void testSquareRoot() {
-        MathCalculator calculator = new MathCalculator();
-        assertEquals(2.0, calculator.squareRoot(4.0), DELTA); // sqrt(4) = 2
+        MathCalculator p = new MathCalculator();
+        assertEquals(2.0, p.squareRoot(4.0)); 
     }
 
     @Test
     public void testLogarithm() {
-        MathCalculator calculator = new MathCalculator();
-        assertEquals(2.0, calculator.logarithm(100.0), DELTA); // log10(100) = 2
+        MathCalculator p = new MathCalculator();
+        assertEquals(2.0, p.logarithm(100.0)); // log10(100) = 2
     }
 
     @Test
     public void testNaturalLogarithm() {
-        MathCalculator calculator = new MathCalculator();
-        assertEquals(1.6094379124341003, calculator.naturalLogarithm(5.0), DELTA); // ln(5) = 1.609
+        MathCalculator p = new MathCalculator();
+        assertEquals(1.6094379124341003, p.naturalLogarithm(5.0)); // ln(5) = 1.609
     }
 }
