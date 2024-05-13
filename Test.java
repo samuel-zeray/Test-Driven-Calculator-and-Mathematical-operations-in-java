@@ -27,7 +27,7 @@ public class Test {
     }
 
 
-           // Permutation    
+            // Permutation    
     @Test
     public void testPermutationOfTwoNumbers() {
         assertEquals(6, p.calculatePermutation(3, 2));
