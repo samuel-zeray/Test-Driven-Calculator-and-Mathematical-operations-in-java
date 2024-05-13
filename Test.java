@@ -6,22 +6,22 @@ public class Test {
    //addition
    @test
    public void testaddition(){
-    assertequals(,sample.calculateaddition(3,7))
+    assertequals(10,sample.calculateaddition(3,7))
    }
    //subtraction
    @test
-   public void testaddition(){
-    assertequals(,sample.calculateaddition(3,7))
+   public void testsubtraction(){
+    assertequals(3,sample.calculatesubtraction(10,7))
    }
    //multiplication
    @test
-   public void testaddition(){
-    assertequals(,sample.calculateaddition(3,7))
+   public void testmultiplication(){
+    assertequals(10,sample.calculatmultiplication(2,4))
    }
    //division
    @test
-   public void testaddition(){
-    assertequals(,sample.calculateaddition(3,7))
+   public void testdivision(){
+    assertequals(5,sample.calculatedivision(20,4))
    }
    // Factorial
     @Test
