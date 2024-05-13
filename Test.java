@@ -2,28 +2,46 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class Test {
-     Calculator p= new Calculator();
-
-   
+     Calculator sample= new Calculator();
+   //addition
+   @test
+   public void testaddition(){
+    assertequals(,sample.calculateaddition(3,7))
+   }
+   //subtraction
+   @test
+   public void testaddition(){
+    assertequals(,sample.calculateaddition(3,7))
+   }
+   //multiplication
+   @test
+   public void testaddition(){
+    assertequals(,sample.calculateaddition(3,7))
+   }
+   //division
+   @test
+   public void testaddition(){
+    assertequals(,sample.calculateaddition(3,7))
+   }
    // Factorial
     @Test
     public void testFactorialOfZero() {
-        assertEquals(1, p.calculateFactorial(0));
+        assertEquals(1, sample.calculateFactorial(0));
     }
     
     @Test
     public void testFactorialOfOne() {
-        assertEquals(1, p.calculateFactorial(1));
+        assertEquals(1,sample.calculateFactorial(1));
     }
     
     @Test
     public void testFactorialOfPositiveNumber() {
-        assertEquals(120, p.calculateFactorial(5));
+        assertEquals(120, sample.calculateFactorial(5));
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testFactorialOfNegativeNumber() {
-        p.calculateFactorial(-5);
+        sample.calculateFactorial(-5);
     }
 
 
@@ -57,12 +75,12 @@ public class Test {
 
     @Test
     public void testCombinationOfTwoNumbers() {
-        assertEquals(3, p.calculateCombination(3, 2));
+        assertEquals(3, sample.calculateCombination(3, 2));
     }
     
     @Test
     public void testCombinationWithSameNumbers() {
-        assertEquals(1, p.calculateCombination(5, 5));
+        assertEquals(1, sample.calculateCombination(5, 5));
     }
     
     @Test(expected = IllegalArgumentException.class)
@@ -84,25 +102,25 @@ public class Test {
 
   @Test
     public void testPower() {
-        assertEquals(8.0, p.power(2.0, 3.0)); 
+        assertEquals(8.0, sample.power(2.0, 3.0)); 
     }
 
             //squarRoot 
     @Test
     public void testSquareRoot() {
-        assertEquals(2.0, p.squareRoot(4.0)); 
+        assertEquals(2.0, sample.squareRoot(4.0)); 
     }
 
         //logarithm 
     @Test
     public void testLogarithm() {
-        assertEquals(2.0, p.logarithm(100.0)); // log10(100) = 2
+        assertEquals(2.0, sample.logarithm(100.0)); // log10(100) = 2
     }
 
 
       //naturalLogarithm 
     @Test
     public void testNaturalLogarithm() {
-        assertEquals(1.6094379124341003, p.naturalLogarithm(5.0)); // ln(5) = 1.609
+        assertEquals(1.6094379124341003, sample.naturalLogarithm(5.0)); // ln(5) = 1.609
     }
 }
