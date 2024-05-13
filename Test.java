@@ -215,121 +215,121 @@ public class Test {
  
           // Temprature converter
           @Test
-    public void testCelsiusToFahrenheit() {
-        assertEquals(32, sample.celsiusToFahrenheit(0), 0.001);
-        assertEquals(212, sample.celsiusToFahrenheit(100), 0.001);
-    }
+            public void testCelsiusToFahrenheit() {
+                assertEquals(32, sample.celsiusToFahrenheit(0), 0.001);
+                assertEquals(212, sample.celsiusToFahrenheit(100), 0.001);
+            }
 
-    @Test
-    public void testCelsiusToKelvin() {
-        assertEquals(273.15, sample.celsiusToKelvin(0), 0.001);
-        assertEquals(373.15, sample.celsiusToKelvin(100), 0.001);
-    }
+                @Test
+                public void testCelsiusToKelvin() {
+                    assertEquals(273.15, sample.celsiusToKelvin(0), 0.001);
+                    assertEquals(373.15, sample.celsiusToKelvin(100), 0.001);
+                }
 
-    @Test
-    public void testFahrenheitToCelsius() {
-        assertEquals(0, sample.fahrenheitToCelsius(32), 0.001);
-        assertEquals(100, sample.fahrenheitToCelsius(212), 0.001);
-    }
+                @Test
+                public void testFahrenheitToCelsius() {
+                    assertEquals(0, sample.fahrenheitToCelsius(32), 0.001);
+                    assertEquals(100, sample.fahrenheitToCelsius(212), 0.001);
+                }
 
-    @Test
-    public void testFahrenheitToKelvin() {
-        assertEquals(273.15, sample.fahrenheitToKelvin(32), 0.001);
-        assertEquals(373.15, sample.fahrenheitToKelvin(212), 0.001);
-    }
+                @Test
+                public void testFahrenheitToKelvin() {
+                    assertEquals(273.15, sample.fahrenheitToKelvin(32), 0.001);
+                    assertEquals(373.15, sample.fahrenheitToKelvin(212), 0.001);
+                }
 
-    @Test
-    public void testKelvinToCelsius() {
-        assertEquals(0, sample.kelvinToCelsius(273.15), 0.001);
-        assertEquals(100, sample.kelvinToCelsius(373.15), 0.001);
-    }
+                @Test
+                public void testKelvinToCelsius() {
+                    assertEquals(0, sample.kelvinToCelsius(273.15), 0.001);
+                    assertEquals(100, sample.kelvinToCelsius(373.15), 0.001);
+                }
 
-    @Test
-    public void testKelvinToFahrenheit() {
-        assertEquals(32, sample.kelvinToFahrenheit(273.15), 0.001);
-        assertEquals(212, sample.kelvinToFahrenheit(373.15), 0.001);
-    }
+                @Test
+                public void testKelvinToFahrenheit() {
+                    assertEquals(32, sample.kelvinToFahrenheit(273.15), 0.001);
+                    assertEquals(212, sample.kelvinToFahrenheit(373.15), 0.001);
+                }
 
-    // Time convereter
-    @Test
-    public void testSecondsToMilliseconds() {
-        assertEquals(1000, sample.secondsToMilliseconds(1), 0.001);
-        assertEquals(2000, sample.secondsToMilliseconds(2), 0.001);
-    }
+                // Time convereter
+                @Test
+                public void testSecondsToMilliseconds() {
+                    assertEquals(1000, sample.secondsToMilliseconds(1), 0.001);
+                    assertEquals(2000, sample.secondsToMilliseconds(2), 0.001);
+                }
 
-    @Test
-    public void testSecondsToMinutes() {
-        assertEquals(1, sample.secondsToMinutes(60), 0.001);
-        assertEquals(2, sample.secondsToMinutes(120), 0.001);
-    }
+                @Test
+                public void testSecondsToMinutes() {
+                    assertEquals(1, sample.secondsToMinutes(60), 0.001);
+                    assertEquals(2, sample.secondsToMinutes(120), 0.001);
+                }
 
-    @Test
-    public void testMinutesToSeconds() {
-        assertEquals(60, sample.minutesToSeconds(1), 0.001);
-        assertEquals(120, sample.minutesToSeconds(2), 0.001);
-    }
+                @Test
+                public void testMinutesToSeconds() {
+                    assertEquals(60, sample.minutesToSeconds(1), 0.001);
+                    assertEquals(120, sample.minutesToSeconds(2), 0.001);
+                }
 
-    @Test
-    public void testHoursToMinutes() {
-        assertEquals(60, sample.hoursToMinutes(1), 0.001);
-        assertEquals(120, sample.hoursToMinutes(2), 0.001);
-    }
+                @Test
+                public void testHoursToMinutes() {
+                    assertEquals(60, sample.hoursToMinutes(1), 0.001);
+                    assertEquals(120, sample.hoursToMinutes(2), 0.001);
+                }
 
-    @Test
-    public void testDaysToHours() {
-        assertEquals(24, sample.daysToHours(1), 0.001);
-        assertEquals(48, sample.daysToHours(2), 0.001);
-    }
+                @Test
+                public void testDaysToHours() {
+                    assertEquals(24, sample.daysToHours(1), 0.001);
+                    assertEquals(48, sample.daysToHours(2), 0.001);
+                }
 
-    @Test
-    public void testWeeksToDays() {
-        assertEquals(7, sample.weeksToDays(1), 0.001);
-        assertEquals(14, sample.weeksToDays(2), 0.001);
-    }
+                @Test
+                public void testWeeksToDays() {
+                    assertEquals(7, sample.weeksToDays(1), 0.001);
+                    assertEquals(14, sample.weeksToDays(2), 0.001);
+                }
 
-    @Test
-    public void testYearsToDays() {
-        assertEquals(365.25, sample.yearsToDays(1), 0.001);
-        assertEquals(730.5, sample.yearsToDays(2), 0.001);
-    }
+                @Test
+                public void testYearsToDays() {
+                    assertEquals(365.25, sample.yearsToDays(1), 0.001);
+                    assertEquals(730.5, sample.yearsToDays(2), 0.001);
+                }
 
-    // Speed converter
-    @Test
-    public void testMetersPerSecondToKilometersPerHour() {
-        assertEquals(3.6, sample.metersPerSecondToKilometersPerHour(1), 0.001);
-        assertEquals(7.2, sample.metersPerSecondToKilometersPerHour(2), 0.001);
-    }
+                // Speed converter
+                @Test
+                public void testMetersPerSecondToKilometersPerHour() {
+                    assertEquals(3.6, sample.metersPerSecondToKilometersPerHour(1), 0.001);
+                    assertEquals(7.2, sample.metersPerSecondToKilometersPerHour(2), 0.001);
+                }
 
-    @Test
-    public void testKilometersPerHourToMetersPerSecond() {
-        assertEquals(1, sample.kilometersPerHourToMetersPerSecond(3.6), 0.001);
-        assertEquals(2, sample.kilometersPerHourToMetersPerSecond(7.2), 0.001);
-    }
+                @Test
+                public void testKilometersPerHourToMetersPerSecond() {
+                    assertEquals(1, sample.kilometersPerHourToMetersPerSecond(3.6), 0.001);
+                    assertEquals(2, sample.kilometersPerHourToMetersPerSecond(7.2), 0.001);
+                }
 
-    @Test
-    public void testMilesPerHourToKilometersPerHour() {
-        assertEquals(1.60934, sample.milesPerHourToKilometersPerHour(1), 0.001);
-        assertEquals(3.21868, sample.milesPerHourToKilometersPerHour(2), 0.001);
-    }
+                @Test
+                public void testMilesPerHourToKilometersPerHour() {
+                    assertEquals(1.60934, sample.milesPerHourToKilometersPerHour(1), 0.001);
+                    assertEquals(3.21868, sample.milesPerHourToKilometersPerHour(2), 0.001);
+                }
 
-    @Test
-    public void testKilometersPerHourToMilesPerHour() {
-        assertEquals(0.621371, sample.kilometersPerHourToMilesPerHour(1), 0.001);
-        assertEquals(1.242742, sample.kilometersPerHourToMilesPerHour(2), 0.001);
-    }
+                @Test
+                public void testKilometersPerHourToMilesPerHour() {
+                    assertEquals(0.621371, sample.kilometersPerHourToMilesPerHour(1), 0.001);
+                    assertEquals(1.242742, sample.kilometersPerHourToMilesPerHour(2), 0.001);
+                }
 
-    // Angle converter
-    @Test
-    public void testDegreesToRadians() {
-        assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
-        assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
-    }
+                // Angle converter
+                @Test
+                public void testDegreesToRadians() {
+                    assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
+                    assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
+                }
 
-    @Test
-    public void testRadiansToDegrees() {
-        assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
-        assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
-    }
+                @Test
+                public void testRadiansToDegrees() {
+                    assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
+                    assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
+                }
 
 
 
