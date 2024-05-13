@@ -1,4 +1,4 @@
-i it
+
 public class Calculator {
     public static int calculateaddition(int num1,num2){
         int summation=num1+num2;
@@ -14,7 +14,7 @@ public class Calculator {
     }
     public static int calculatedivision(int num1,num2){
     int division=num1/num2;
-    return division;
+    return division;  
      }
     
     
@@ -92,6 +92,33 @@ public class Calculator {
          //natural logarithm
     public double naturalLogarithm(double value) {
         return Math.log(value);
+    }
+
+        //Inverse of Trignometric functions 
+    
+
+    public static double inverseSin(double value) {
+        return Math.asin(value);
+    }
+
+    public static double inverseCos(double value) {
+        return Math.acos(value);
+    }
+
+    public static double inverseTan(double value) {
+        return Math.atan(value);
+    }
+
+    public static double inverseSec(double value) {
+        return 1 / Math.acos(value);
+    }
+
+    public static double inverseCot(double value) {
+        return 1 / Math.atan(value);
+    }
+
+    public static double inverseCsc(double value) {
+        return 1 / Math.asin(value);
     }
 
 }

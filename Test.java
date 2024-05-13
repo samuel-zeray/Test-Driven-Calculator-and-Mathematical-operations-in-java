@@ -49,27 +49,27 @@ public class Test {
             // Permutation    
     @Test
     public void testPermutationOfTwoNumbers() {
-        assertEquals(6, p.calculatePermutation(3, 2));
+        assertEquals(6, sample.calculatePermutation(3, 2));
     }
     
     @Test
     public void testPermutationWithSameNumbers() {
-        assertEquals(1, p.calculatePermutation(5, 5));
+        assertEquals(1, sample.calculatePermutation(5, 5));
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testPermutationWithNegativeNumberN() {
-        p.calculatePermutation(-3, 2);
+        sample.calculatePermutation(-3, 2);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testPermutationWithNegativeNumberR() {
-        p.calculatePermutation(3, -2);
+        sample.calculatePermutation(3, -2);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testPermutationWithRGreaterThanN() {
-        p.calculatePermutation(2, 3);
+        sample.calculatePermutation(2, 3);
     }
 
             // Combination
@@ -86,17 +86,17 @@ public class Test {
     
     @Test(expected = IllegalArgumentException.class)
     public void testCombinationWithNegativeNumberN() {
-        p.calculateCombination(-3, 2);
+        sample.calculateCombination(-3, 2);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testCombinationWithNegativeNumberR() {
-        p.calculateCombination(3, -2);
+        sample.calculateCombination(3, -2);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testCombinationWithRGreaterThanN() {
-        p.calculateCombination(2, 3);
+       sample.calculateCombination(2, 3);
     }
 
             //power
@@ -124,4 +124,38 @@ public class Test {
     public void testNaturalLogarithm() {
         assertEquals(1.6094379124341003, sample.naturalLogarithm(5.0)); // ln(5) = 1.609
     }
+
+
+     //Inverse Trigonometric functions 
+
+    @Test
+    public void testInverseSin() {
+        assertEquals(0.5, sample.inverseSin(Math.sin(0.5)), 0.0001);
+    }
+
+    @Test
+    public void testInverseCos() {
+        assertEquals(0.5, sample.inverseCos(Math.cos(0.5)), 0.0001);
+    }
+
+    @Test
+    public void testInverseTan() {
+        assertEquals(0.5, sample.inverseTan(Math.tan(0.5)), 0.0001);
+    }
+
+    @Test
+    public void testInverseSec() {
+        assertEquals(2.0, sample.inverseSec(1 / Math.cos(0.5)), 0.0001);
+    }
+
+    @Test
+    public void testInverseCot() {
+        assertEquals(2.0, sample.inverseCot(1 / Math.tan(0.5)), 0.0001);
+    }
+
+     @Test
+    public void testInverseCsc() {
+        assertEquals(2.0, sample.inverseCsc(1 / Math.sin(0.5)), 0.0001);
+    }
+
 }
