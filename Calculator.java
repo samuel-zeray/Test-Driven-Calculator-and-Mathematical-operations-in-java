@@ -52,6 +52,21 @@ public class Calculator {
         }
         return factorial;
     }
+    public double power(double base, double exponent) {
+        return Math.pow(base, exponent);
+    }
+
+    public double squareRoot(double value) {
+        return Math.sqrt(value);
+    }
+
+    public double logarithm(double value) {
+        return Math.log10(value);
+    }
+
+    public double naturalLogarithm(double value) {
+        return Math.log(value);
+    }
 
 }
 
