@@ -80,27 +80,29 @@ public class Test {
         p.calculateCombination(2, 3);
     }
 
+           //power
+
   @Test
     public void testPower() {
-        MathCalculator p = new MathCalculator();
         assertEquals(8.0, p.power(2.0, 3.0)); 
     }
 
+           //squarRoot 
     @Test
     public void testSquareRoot() {
-        MathCalculator p = new MathCalculator();
         assertEquals(2.0, p.squareRoot(4.0)); 
     }
 
+       //logarithm 
     @Test
     public void testLogarithm() {
-        MathCalculator p = new MathCalculator();
         assertEquals(2.0, p.logarithm(100.0)); // log10(100) = 2
     }
 
+
+     //naturalLogarithm 
     @Test
     public void testNaturalLogarithm() {
-        MathCalculator p = new MathCalculator();
         assertEquals(1.6094379124341003, p.naturalLogarithm(5.0)); // ln(5) = 1.609
     }
 }
