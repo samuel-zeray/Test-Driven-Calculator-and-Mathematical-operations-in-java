@@ -1,5 +1,22 @@
-
+i it
 public class Calculator {
+    public static int calculateaddition(int num1,num2){
+        int summation=num1+num2;
+        return summation;
+    }
+    public static int calculatesubtraction(int num1,num2){
+    int subtraction=num1-num2;
+    return subtraction;
+    }
+    public static int calculatemultiplication(int num1,num2){
+    int multiplication=num1*num2;
+    return multiplication;
+    }
+    public static int calculatedivision(int num1,num2){
+    int division=num1/num2;
+    return division;
+     }
+    
     
                 //Factorial
     public static int calculateFactorial(int n) {
@@ -51,6 +68,30 @@ public class Calculator {
             factorial *= i;
         }
         return factorial;
+    }
+
+
+           //Power
+    public double power(double base, double exponent) {
+        return Math.pow(base, exponent);
+    }
+
+
+           //squarRoot
+  public double squareRoot(double value) {
+        return Math.sqrt(value);
+    }
+
+
+            //logarithm
+    public double logarithm(double value) {
+        return Math.log10(value);
+    }
+
+
+         //natural logarithm
+    public double naturalLogarithm(double value) {
+        return Math.log(value);
     }
 
 }
