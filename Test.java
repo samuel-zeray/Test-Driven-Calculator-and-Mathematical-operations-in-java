@@ -24,6 +24,33 @@ public class Test {
    public void testdivision(){
     assertequals(5,sample.calculatedivision(20,4))
    }
+   //Trigonometric testcases
+   @Test
+    public void testSine() {
+        assertEquals(0.0, TrigonometricFunctions.sine(0), 0.001);
+        assertEquals(1.0, TrigonometricFunctions.sine(90), 0.001);
+        assertEquals(0.0, TrigonometricFunctions.sine(180), 0.001);
+        assertEquals(-1.0, TrigonometricFunctions.sine(270), 0.001);
+        assertEquals(0.5, TrigonometricFunctions.sine(30), 0.001);
+    }
+
+    @Test
+    public void testCosine() {
+        assertEquals(1.0, TrigonometricFunctions.cosine(0), 0.001);
+        assertEquals(0.0, TrigonometricFunctions.cosine(90), 0.001);
+        assertEquals(-1.0, TrigonometricFunctions.cosine(180), 0.001);
+        assertEquals(0.0, TrigonometricFunctions.cosine(270), 0.001);
+        assertEquals(0.866, TrigonometricFunctions.cosine(30), 0.001);
+    }
+
+    @Test
+    public void testTangent() {
+        assertEquals(0.0, TrigonometricFunctions.tangent(0), 0.001);
+        assertEquals(Double.POSITIVE_INFINITY, TrigonometricFunctions.tangent(90), 0.001);
+        assertEquals(0.0, TrigonometricFunctions.tangent(180), 0.001);
+        assertEquals(Double.NEGATIVE_INFINITY, TrigonometricFunctions.tangent(270), 0.001);
+        assertEquals(0.577, TrigonometricFunctions.tangent(30), 0.001);
+    }
    // Factorial
     @Test
     public void testFactorialOfZero() {
