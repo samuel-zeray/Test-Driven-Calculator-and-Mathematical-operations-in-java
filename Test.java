@@ -7,23 +7,35 @@ public class Test {
    //addition
    @test
    public void testaddition(){
-    assertequals(10,sample.calculateaddition(3,7))
+           assertequals(10.0,sample.calculateaddition(3.0,7.0));
+           assertequals(3.0,sample.calculateaddition(2.0,2.0));
    }
    //subtraction
    @test
    public void testsubtraction(){
-    assertequals(3,sample.calculatesubtraction(10,7))
+           assertequals(3.0,sample.calculatesubtraction(10.0,7.0));
+           assertequals(3.0,sample.calculatesubtraction(3.0,2.0));
    }
    //multiplication
    @test
    public void testmultiplication(){
-    assertequals(10,sample.calculatemultiplication(2,4))
+           assertequals(10.0,sample.calculatemultiplication(2.0,4.0));
+           assertequals(12.0,sample.calculatemultiplication(3.0,4.0));
    }
-   //division
+   //division with float 
    @test
-   public void testdivision(){
-    assertequals(5,sample.calculatedivision(20,4))
+   public void testdivisionWITHFLOAT(){
+            assertequals(5.0,sample.calculatedivision(20.0,4.0));
+            assertequals('INFINITY',sample.calculatedivision(20.0,0.0));
+            assertequals(0,sample.calculatedivision(0.0,4.0));
+            assertequals(2.0,sample.calculatedivision(10.0,4.0));
    }
+   //division with integer
+   @Test(expected = IllegalArgumentException.class)
+   public void DestDivisionWITHINTEGER() {
+     assertequals(5,sample.calculatedivision(5.0,1.0));
+     assertequals(0,sample.calculatedivision(5.0,0.0));//the "RUN:UNDEFINED".
+
    //Trigonometric testcases
    @Test
     public void testSine() {

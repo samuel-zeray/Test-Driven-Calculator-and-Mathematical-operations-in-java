@@ -1,22 +1,30 @@
 public class Calculator {
-    public static int calculateaddition(int num1, int num2){
-        int summation=num1+num2;
-        return summation;
-    }
-    public static int calculatesubtraction(int num1, int num2){
-    int subtraction=num1-num2;
-    return subtraction;
-    }
-    public static int calculatemultiplication(int num1, int num2){
-    int multiplication=num1*num2;
-    return multiplication;
-    }
-    public static int calculatedivision(int num1, int num2){
-    int division=num1/num2;
-    return division;
-     }
+    public static double calculateaddition(double num1, double num2){
+                  double summation=num1+num2;
+                  return summation;
+                  }
+    public static double calculatesubtraction(double num1, double num2){
+                  double subtraction=num1-num2;
+                  return subtraction;
+                  }
+    public static double calculatemultiplication(double num1, double num2){
+                  double multiplication=num1*num2;
+                  return multiplication;
+                  }
+    public static int calculatedivision(int num1, int num2){//if the nos are integer.
+                 if (num2==0) {
+                     throw new IllegalArgumentException("any no cann't divid by zero,otherwise undefined");
+                     //if the data type of the no is float no the result will be "INFINITY".
+                 }
+                  double division=num1/num2;
+                  return division;
+                 }
+    public static double calculatedivision(double num1, double num2){//if the nos are float.
+                 double division=num1/num2;
+                 return division;
+               }
     
-                 //Trigonometric calculations
+    //Trigonometric calculations
     public class TrigonometricFunctions {
         public static double sine(double angleInDegrees) {
             return Math.sin(Math.toRadians(angleInDegrees));
@@ -24,7 +32,6 @@ public class Calculator {
         public static double cosine(double angleInDegrees) {
             return Math.cos(Math.toRadians(angleInDegrees));
         }
-                
         public static double tangent(double angleInDegrees) {
             return Math.tan(Math.toRadians(angleInDegrees));
         }
