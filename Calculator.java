@@ -1,4 +1,3 @@
-
 public class Calculator {
     public static int calculateaddition(int num1, int num2){
         int summation=num1+num2;
@@ -17,7 +16,19 @@ public class Calculator {
     return division;
      }
     
-    
+                 //Trigonometric calculations
+    public class TrigonometricFunctions {
+        public static double sine(double angleInDegrees) {
+            return Math.sin(Math.toRadians(angleInDegrees));
+        }    
+        public static double cosine(double angleInDegrees) {
+            return Math.cos(Math.toRadians(angleInDegrees));
+        }
+                
+        public static double tangent(double angleInDegrees) {
+            return Math.tan(Math.toRadians(angleInDegrees));
+        }
+    }
                 //Factorial
     public static int calculateFactorial(int n) {
         if (n < 0) {
