@@ -35,7 +35,7 @@ public class Test {
    public void DestDivisionWITHINTEGER() {
      assertequals(5,sample.calculatedivision(5.0,1.0));
      assertequals(0,sample.calculatedivision(5.0,0.0));//the "RUN:UNDEFINED".
-
+     assertequals(5.0,sample.calculatedivision(20.0,3.0));
    //Trigonometric testcases
    @Test
     public void testSine() {
