@@ -16,14 +16,29 @@ public class Calculator {
                      throw new IllegalArgumentException("any no cann't divid by zero,otherwise undefined");
                      //if the data type of the no is float no the result will be "INFINITY".
                  }
-                  double division=num1/num2;
+                  int division=num1/num2;
                   return division;
                  }
     public static double calculatedivision(double num1, double num2){//if the nos are float.
                  double division=num1/num2;
                  return division;
                }
-    
+               //body mass index tip
+    public static double bodyMassIndex(double weight,double height){
+                double BMI=(weight/Math.pow(height,2));
+                if (BMI<0){
+                    throw new IllegalArgumentException("Tbmi cann't be negative");
+                }
+                if(BMI<18){
+                     return -1;//underweight
+                 }
+                if(BMI>18||BMI<30){
+                    return 0;//normal
+                 }
+               if(BMI>30){
+                return 1;//overweight
+                 }
+            }
     //Trigonometric calculations
     public class TrigonometricFunctions {
         public static double sine(double angleInDegrees) {

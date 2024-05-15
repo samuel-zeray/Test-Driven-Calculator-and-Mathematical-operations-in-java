@@ -4,6 +4,13 @@ import static org.junit.Assert.assertEquals;
 
 public class Test {
      Calculator sample= new Calculator();
+      //body mass index
+    @Test
+    public void testBodyMassIndex(){
+        assertEquals(1,sample.bodyMassIndex(50.0,1.75));
+        assertEquals(0,sample.bodyMassIndex(60.0,1.4));
+        assertEquals(-1,sample.bodyMassIndex(50.0,1.65));
+    }
    //addition
    @test
    public void testaddition(){
