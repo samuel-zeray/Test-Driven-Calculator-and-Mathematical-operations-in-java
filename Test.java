@@ -86,6 +86,14 @@ public class Test {
         assertEquals(Double.NEGATIVE_INFINITY, TrigonometricFunctions.tangent(270), 0.001);
         assertEquals(0.577, TrigonometricFunctions.tangent(30), 0.001);
     }
+    // Median Test case
+    @Test
+    public void testMedian() {
+        int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
+        ouble expectedMedian = 5.0;
+        double median = calculateMedian(numbers);
+        assertEquals(expectedMedian, median, 0.001);
+    }
    // Factorial
     @Test
     public void testFactorialOfZero() {
@@ -461,7 +469,4 @@ public class Test {
         int[] nums = null;
         Mode.findMode(nums);
     }
-
-
-
 }
