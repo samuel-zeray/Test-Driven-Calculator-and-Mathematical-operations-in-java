@@ -67,6 +67,21 @@ public class Calculator {
     public static double tangent(double angleInDegrees) {
         return Math.tan(Math.toRadians(angleInDegrees));
     }
+                //Median
+    public static double calculateMedian(int[] numbers) {
+        // Sort the array
+        Arrays.sort(numbers);        
+        int length = numbers.length;
+        double median;
+        if (length % 2 == 0) {
+        // If the array length is even, average the middle two numbers
+        median = (double) (numbers[length / 2 - 1] + numbers[length / 2]) / 2;
+        } else {
+        // If the array length is odd, take the middle number
+        median = numbers[length / 2];
+        }
+        return median;
+    }
 
                 //Factorial
     public static int calculateFactorial(int n) {
@@ -309,6 +324,7 @@ public class Calculator {
         return (double) sum / numbers.length;
 
     } 
+
 
             // Absolute value
     public static int absolute(int num) {
