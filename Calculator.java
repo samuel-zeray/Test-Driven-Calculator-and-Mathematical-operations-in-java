@@ -272,14 +272,13 @@ public class Calculator {
         public static double inverseCot(double value) {
             return 1 / Math.atan(value);
         }
-
-
-          //mean
-    
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
-    public class MeanCalculator {
+ 
+          //mean
+    
+        
     public static double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
@@ -291,7 +290,14 @@ public class Calculator {
         }
         
         return (double) sum / numbers.length;
-    }    
+    } 
+
+            // Absolute value
+    public static int absolute(int num) {
+        return num >= 0 ? num : -num;
+    }
+
+  
 
     }
     
