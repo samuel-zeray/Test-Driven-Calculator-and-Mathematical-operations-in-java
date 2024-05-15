@@ -1,3 +1,7 @@
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Calculator {
     //basic mathematical functions
     public static double calculateaddition(double num1, double num2){
@@ -311,7 +315,32 @@ public class Calculator {
         return num >= 0 ? num : -num;
     }
 
-  
+           // Mode
+    public static int findMode(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("Array is empty or null");
+        }
+        
+        // Create a frequency map to store the count of each number
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num : nums) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        // Find the mode (number with highest frequency)
+        int mode = nums[0];
+        int maxFrequency = frequencyMap.get(nums[0]);
+        for (int num : frequencyMap.keySet()) {
+            if (frequencyMap.get(num) > maxFrequency) {
+                maxFrequency = frequencyMap.get(num);
+                mode = num;
+            }
+        }
+        
+        return mode;
+    }
+
+
 
 
     }    
