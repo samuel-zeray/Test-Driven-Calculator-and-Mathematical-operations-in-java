@@ -397,19 +397,38 @@ public class Test {
 
 
               //mean
-
-
-@Test
+      @Test
     public void testCalculateMean() {
         int[] numbers = {1, 2, 3, 4, 5};
         double expectedMean = 3.0;
         double actualMean =sample.calculateMean(numbers);
         assertEquals(expectedMean, actualMean, 0.001);
     }
-
+     
+             // Absolute value
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateMeanEmptyArray() {
         int[] emptyArray = {};
         Sample.calculateMean(emptyArray);
     }
+
+    @Test
+    public void testPositiveNumber() {
+        int result = Sample.absolute(5);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testNegativeNumber() {
+        int result = Sample.absolute(-5);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testZero() {
+        int result = Sample.absolute(0);
+        assertEquals(0, result);
+    }
+
+
 }
