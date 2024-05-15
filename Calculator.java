@@ -39,18 +39,18 @@ public class Calculator {
                 return 1;//overweight
                  }
             }
+            
     //Trigonometric calculations
-    public class TrigonometricFunctions {
-        public static double sine(double angleInDegrees) {
-            return Math.sin(Math.toRadians(angleInDegrees));
-        }    
-        public static double cosine(double angleInDegrees) {
-            return Math.cos(Math.toRadians(angleInDegrees));
-        }
-        public static double tangent(double angleInDegrees) {
-            return Math.tan(Math.toRadians(angleInDegrees));
-        }
+    public static double sine(double angleInDegrees) {
+        return Math.sin(Math.toRadians(angleInDegrees));
+    }    
+    public static double cosine(double angleInDegrees) {
+        return Math.cos(Math.toRadians(angleInDegrees));
     }
+    public static double tangent(double angleInDegrees) {
+        return Math.tan(Math.toRadians(angleInDegrees));
+    }
+
                 //Factorial
     public static int calculateFactorial(int n) {
         if (n < 0) {
@@ -290,6 +290,7 @@ public class Calculator {
         }
         
         return (double) sum / numbers.length;
+
     } 
 
             // Absolute value
@@ -299,7 +300,9 @@ public class Calculator {
 
   
 
-    }
+
+    }    
+
     
        
 
