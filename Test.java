@@ -4,6 +4,22 @@ import static org.junit.Assert.assertEquals;
 
 public class Test {
      Calculator sample= new Calculator();
+     //basic areas shape computation
+    @Test
+    public void testAreaOfRectangle(){
+        assertEquals(1.0,sample.areaOfRectangle(3.0,1.0)); 
+        assertEquals(4.0,sample.areaOfRectangle(2.0,2.0)); 
+    }
+    @Test
+    public void testAreaOfSquare(){
+        assertEquals(25,sample.areaOfRectangle(5)); 
+        assertEquals(15,sample.areaOfRectangle(4)); 
+    }
+    @Test
+    public void testAreaOfCircle(){
+        assertEquals(100,sample.areaOfCircle(50.0)); 
+        assertEquals(31.4,sample.areaOfCircle(10.0)); 
+    }
       //body mass index
     @Test
     public void testBodyMassIndex(){
