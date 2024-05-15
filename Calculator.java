@@ -1,4 +1,5 @@
 public class Calculator {
+    //basic mathematical functions
     public static double calculateaddition(double num1, double num2){
                   double summation=num1+num2;
                   return summation;
@@ -39,7 +40,19 @@ public class Calculator {
                 return 1;//overweight
                  }
             }
-            
+   //shapes area computation
+    public static double areaOfRectangle(double width,double height){
+               double areaR=width*height;
+               return areaR;
+    }
+    public static double areaOfSquare(double length){
+        double areaS=Math.pow(length,2);
+        return areaS;
+    }  
+    public static double areaOfcircle(double radius){
+        double areaC=Math.PI*Math.pow(radius, 2);
+        return areaC;
+    }    
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
