@@ -257,11 +257,26 @@ public class Calculator {
         public static double inverseCot(double value) {
             return 1 / Math.atan(value);
         }
+
+
+          //mean
     
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+    public class MeanCalculator {
+    public static double calculateMean(int[] numbers) {
+        if (numbers.length == 0) {
+            throw new IllegalArgumentException("Array must not be empty");
+        }
         
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        
+        return (double) sum / numbers.length;
+    }    
 
     }
     
