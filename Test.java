@@ -430,5 +430,38 @@ public class Test {
         assertEquals(0, result);
     }
 
+       //Mode
+    
+    @Test
+    public void testFindMode() {
+        int[] nums = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+        assertEquals(4, Mode.findMode(nums));
+    }
+    
+    @Test
+    public void testFindModeWithOneElement() {
+        int[] nums = {5};
+        assertEquals(5, Mode.findMode(nums));
+    }
+    
+    @Test
+    public void testFindModeWithMultipleModes() {
+        int[] nums = {1, 1, 2, 2, 3, 3, 3};
+        assertEquals(1, Mode.findMode(nums));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testFindModeWithEmptyArray() {
+        int[] nums = {};
+        Mode.findMode(nums);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testFindModeWithNullArray() {
+        int[] nums = null;
+        Mode.findMode(nums);
+    }
+
+
 
 }
