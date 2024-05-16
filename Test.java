@@ -20,7 +20,7 @@ public class Test {
         assertEquals(100,sample.areaOfCircle(50.0)); 
         assertEquals(31.4,sample.areaOfCircle(10.0)); 
     }
-
+    //test case of trinagle function
     @Test
     public void testCalculateArea() {
         // Test case 1: Normal case
