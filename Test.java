@@ -57,8 +57,6 @@ public class Test {
         });
         assertEquals("Base and height must be positive numbers.", exception.getMessage());
     }
-
-=======
     //cercumcetance of shapes
     @Test
     public void testcercumcetanceRectangle(){
@@ -75,7 +73,6 @@ public class Test {
         assertEquals(100,sample.cercumcetanceCircle(50.0)); 
         assertEquals(62.8,sample.cercumcetanceCircle(10.0)); 
     }
->>>>>>> b355886 (add commit cercumcetance of shapes function)
       //body mass index
     @Test
     public void testBodyMassIndex(){
