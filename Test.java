@@ -149,7 +149,7 @@ public class Test {
     @Test
     public void testMedian() {
         int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
-        ouble expectedMedian = 5.0;
+        double expectedMedian = 5.0;
         double median = calculateMedian(numbers);
         assertEquals(expectedMedian, median, 0.001);
     }
@@ -285,6 +285,14 @@ public class Test {
      @Test
     public void testInverseCsc() {
         assertEquals(2.0, sample.inverseCsc(1 / Math.sin(0.5)), 0.0001);
+    }
+    //Test case of range function
+    @Test
+    public void testRange(String[] args) {
+        int[] testNumbers = {4, 5, 2, 10, 8};
+        int expectedRange = 2;
+        int range = calculateRange(testNumbers);
+        assertEquals(expectedRange, range, 0.001);
     }
               
     

@@ -65,6 +65,8 @@ public class Calculator {
         }
         return (base * height) / 2;
     } 
+  
+  
     //cercumstance of shapes
     public static double perimeterOfRectangle(double width,double height){
         double cercumstanceR=2*(width+height);
@@ -82,6 +84,9 @@ public class Calculator {
             double perimeterT=length1+length2+length3;
             return perimeterT;
          }
+    }    
+
+
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
@@ -332,6 +337,7 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+
         //function that calculates range function
         public static int calculateRange(int[] numbers) {
             if (numbers == null || numbers.length == 0) {
@@ -353,9 +359,7 @@ public class Calculator {
             return max - min;
         }
     
-          //mean
-    
-        
+          //mean    
     public static double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
