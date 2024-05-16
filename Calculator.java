@@ -412,7 +412,13 @@ public class Calculator {
         
         return mode;
     }
+//calculating antiln 
+      public class AntilnCalculator {
 
+      public double calculateAntiln(double value) {
+        return Math.exp(value);
+    }
+}
 
 
 
