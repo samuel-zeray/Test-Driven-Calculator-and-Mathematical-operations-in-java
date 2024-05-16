@@ -20,6 +20,7 @@ public class Test {
         assertEquals(100,sample.areaOfCircle(50.0)); 
         assertEquals(31.4,sample.areaOfCircle(10.0)); 
     }
+<<<<<<< HEAD
     //test case of trinagle function
     @Test
     public void testCalculateArea() {
@@ -56,7 +57,22 @@ public class Test {
         });
         assertEquals("Base and height must be positive numbers.", exception.getMessage());
     }
-
+    //cercumcetance of shapes
+    @Test
+    public void testcercumcetanceRectangle(){
+        assertEquals(1.0,sample.cercumcetanceRectangle(3.0,1.0)); 
+        assertEquals(8.0,sample.cercumcetanceRectangle(2.0,2.0)); 
+    }
+    @Test
+    public void testcercumcetanceSquare(){
+        assertEquals(20.0,sample.cercumcetanceSquare(5)); 
+        assertEquals(15.0,sample.cercumcetanceSquare(4)); 
+    }
+    @Test
+    public void testcercumcetanceCircle(){
+        assertEquals(100,sample.cercumcetanceCircle(50.0)); 
+        assertEquals(62.8,sample.cercumcetanceCircle(10.0)); 
+    }
       //body mass index
     @Test
     public void testBodyMassIndex(){
