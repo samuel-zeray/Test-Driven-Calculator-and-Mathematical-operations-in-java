@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -358,6 +357,15 @@ public class Calculator {
     
             return max - min;
         }
+
+          // Remainder
+
+    public static int calculateRemainder(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return dividend % divisor;
+    }
     
           //mean    
     public static double calculateMean(int[] numbers) {
