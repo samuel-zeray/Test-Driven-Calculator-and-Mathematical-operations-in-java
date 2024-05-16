@@ -288,7 +288,7 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
-        //function of range
+        //function that calculates range function
         public static int calculateRange(int[] numbers) {
             if (numbers == null || numbers.length == 0) {
                 return 0;
