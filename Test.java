@@ -20,6 +20,43 @@ public class Test {
         assertEquals(100,sample.areaOfCircle(50.0)); 
         assertEquals(31.4,sample.areaOfCircle(10.0)); 
     }
+
+    @Test
+    public void testCalculateArea() {
+        // Test case 1: Normal case
+        double base = 10;
+        double height = 5;
+        double expectedArea = 25.0;
+        double actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        assertEquals(expectedArea, actualArea, "The area should be 25.0");
+
+        // Test case 2: Base and height are 1
+        base = 1;
+        height = 1;
+        expectedArea = 0.5;
+        actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        assertEquals(expectedArea, actualArea, "The area should be 0.5");
+
+        // Test case 3: Base and height are large values
+        base = 10000;
+        height = 20000;
+        expectedArea = 100000000.0;
+        actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        assertEquals(expectedArea, actualArea, "The area should be 100000000.0");
+
+        // Test case 4: Invalid input (negative base)
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            TriangleAreaCalculator.calculateArea(-10, 5);
+        });
+        assertEquals("Base and height must be positive numbers.", exception.getMessage());
+
+        // Test case 5: Invalid input (zero height)
+        exception = assertThrows(IllegalArgumentException.class, () -> {
+            TriangleAreaCalculator.calculateArea(10, 0);
+        });
+        assertEquals("Base and height must be positive numbers.", exception.getMessage());
+    }
+
       //body mass index
     @Test
     public void testBodyMassIndex(){
