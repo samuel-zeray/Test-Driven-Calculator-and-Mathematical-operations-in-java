@@ -65,7 +65,7 @@ public class Test {
     }
     //cercumcetance of shapes
     @Test
-    public void testcercumcetanceRectangle(){
+    public void testperimeterRectangle(){
         assertEquals(1.0,sample.perimeterOfRectangle(3.0,1.0)); 
         assertEquals(8.0,sample.perimeterOfRectangle(2.0,2.0)); 
     }
