@@ -314,10 +314,29 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+
+        //function that calculates range function
+        public static int calculateRange(int[] numbers) {
+            if (numbers == null || numbers.length == 0) {
+                return 0;
+            }
     
-          //mean
+            int min = numbers[0];
+            int max = numbers[0];
     
-        
+            for (int i = 1; i < numbers.length; i++) {
+                if (numbers[i] < min) {
+                    min = numbers[i];
+                }
+                if (numbers[i] > max) {
+                    max = numbers[i];
+                }
+            }
+    
+            return max - min;
+        }
+    
+          //mean    
     public static double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
