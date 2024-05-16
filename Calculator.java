@@ -93,9 +93,9 @@ public class Calculator {
         return Math.tan(Math.toRadians(angleInDegrees));
     }
                 //Median
-    public static double calculateMedian(int[] numbers) {
+    public static double calculateMedian(int[] , numbers) {
         // Sort the array
-        Array.sort(numbers);        
+        arrays.sort(numbers);        
         int length = numbers.length;
         double median;
         if (length % 2 == 0) {
