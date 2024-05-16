@@ -314,6 +314,7 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+
         //function that calculates range function
         public static int calculateRange(int[] numbers) {
             if (numbers == null || numbers.length == 0) {
@@ -335,9 +336,7 @@ public class Calculator {
             return max - min;
         }
     
-          //mean
-    
-        
+          //mean    
     public static double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
