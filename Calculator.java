@@ -419,7 +419,13 @@ public class Calculator {
         return Math.exp(value);
     }
 }
+//calculating antilogarithm function 
+public class AntilogCalculator {
 
+    public double calculateAntilog(double base, double value) {
+        return Math.pow(base, value);
+    }
+}
 
 
     }    
