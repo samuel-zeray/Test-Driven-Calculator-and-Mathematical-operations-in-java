@@ -551,4 +551,20 @@ public class Test {
         int[] nums = null;
         Mode.findMode(nums);
     }
+        import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+    }
+
+        //antiln
+        public class AntilnCalculatorTest {
+
+    @Test
+    public void testCalculateAntiln() {
+        AntilnCalculator calculator = new AntilnCalculator();
+        
+        assertEquals(1.0, calculator.calculateAntiln(0), 0.0001);
+        assertEquals(Math.E, calculator.calculateAntiln(1), 0.0001);
+        assertEquals(Math.exp(2), calculator.calculateAntiln(2), 0.0001);
+
 }
