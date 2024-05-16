@@ -58,7 +58,7 @@ public class Calculator {
         return areaC;
     }
      // Function to calculate the area of a triangle
-    public static double areaOfTriangle(double base, double height) {
+    public static double calculateArea(double base, double height) {
         if (base <= 0 || height <= 0) {
             throw new IllegalArgumentException("Base and height must be positive numbers.");
         }
