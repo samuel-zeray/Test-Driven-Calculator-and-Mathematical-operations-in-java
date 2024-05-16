@@ -56,6 +56,13 @@ public class Calculator {
     public static double areaOfcircle(double radius){
         double areaC=Math.PI*Math.pow(radius, 2);
         return areaC;
+    }
+     // Function to calculate the area of a triangle
+    public static double areaOfTriangle(double base, double height) {
+        if (base <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Base and height must be positive numbers.");
+        }
+        return (base * height) / 2;
     }    
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
