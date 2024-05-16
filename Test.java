@@ -143,7 +143,7 @@ public class Test {
     @Test
     public void testMedian() {
         int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
-        ouble expectedMedian = 5.0;
+        double expectedMedian = 5.0;
         double median = calculateMedian(numbers);
         assertEquals(expectedMedian, median, 0.001);
     }
