@@ -238,7 +238,7 @@ public class Main {
                             System.out.println();
                             break;    
                         }
-                      case 24:
+                    case 24:
                           // Prompt user to enter the number of elements
                           System.out.print("Enter the number of elements: ");
                           int num = scanner.nextInt();
@@ -256,7 +256,7 @@ public class Main {
                           double median = calculateMedian(numbers);
                           System.out.println("Median of the entered numbers: " + median);
                           break;
-                      case 25:
+                    case 25:
                            // Prompt user to enter the sides of the triangle
                           System.out.print("Enter the length of the first side: ");
                           double side1 = scanner.nextDouble();
@@ -273,9 +273,26 @@ public class Main {
                           // Display the result
                           System.out.println("The area of the triangle is: " + area);
                           break; 
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-                    break;
+                    case 26:
+                         // Prompt user to enter the sides of the triangle
+                        System.out.print("Enter the length of the first side: ");
+                        double length1 = scanner.nextDouble();
+
+                        System.out.print("Enter the length of the second side: ");
+                        double length2= scanner.nextDouble();
+
+                        System.out.print("Enter the length of the third side: ");
+                        double length3 = scanner.nextDouble();
+
+                        // Calculate the perimeter of the triangle
+                        double perimeter = perimeterOftriangle(length1, length2, length3);
+
+                        // Display the result
+                        System.out.println("The perimeter of the triangle is: " + perimeter);
+                        break; 
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                        break;
             }
             scanner.nextLine();
         }
