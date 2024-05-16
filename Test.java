@@ -478,7 +478,22 @@ public class Test {
         double expectedMean = 3.0;
         double actualMean =sample.calculateMean(numbers);
         assertEquals(expectedMean, actualMean, 0.001);
+      }
+
+        // Remainder 
+
+    @Test
+    public void testCalculateRemainder() {
+        assertEquals(1, Remainder.calculateRemainder(5, 2));
+        assertEquals(0, Remainder.calculateRemainder(10, 2));
+        assertEquals(3, Remainder.calculateRemainder(11, 4));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        Remainder.calculateRemainder(10, 0);
+    }
+        
      
              // Absolute value
     @Test(expected = IllegalArgumentException.class)
