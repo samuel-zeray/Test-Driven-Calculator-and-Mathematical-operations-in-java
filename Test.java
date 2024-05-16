@@ -149,7 +149,7 @@ public class Test {
     @Test
     public void testMedian() {
         int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
-        ouble expectedMedian = 5.0;
+        double expectedMedian = 5.0;
         double median = calculateMedian(numbers);
         assertEquals(expectedMedian, median, 0.001);
     }
@@ -285,6 +285,14 @@ public class Test {
      @Test
     public void testInverseCsc() {
         assertEquals(2.0, sample.inverseCsc(1 / Math.sin(0.5)), 0.0001);
+    }
+    //Test case of range function
+    @Test
+    public void testRange(String[] args) {
+        int[] testNumbers = {4, 5, 2, 10, 8};
+        int expectedRange = 2;
+        int range = calculateRange(testNumbers);
+        assertEquals(expectedRange, range, 0.001);
     }
               
     
@@ -470,7 +478,22 @@ public class Test {
         double expectedMean = 3.0;
         double actualMean =sample.calculateMean(numbers);
         assertEquals(expectedMean, actualMean, 0.001);
+      }
+
+        // Remainder 
+
+    @Test
+    public void testCalculateRemainder() {
+        assertEquals(1, Remainder.calculateRemainder(5, 2));
+        assertEquals(0, Remainder.calculateRemainder(10, 2));
+        assertEquals(3, Remainder.calculateRemainder(11, 4));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        Remainder.calculateRemainder(10, 0);
+    }
+        
      
              // Absolute value
     @Test(expected = IllegalArgumentException.class)
@@ -528,4 +551,20 @@ public class Test {
         int[] nums = null;
         Mode.findMode(nums);
     }
+        import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+    }
+
+        //antiln
+        public class AntilnCalculatorTest {
+
+    @Test
+    public void testCalculateAntiln() {
+        AntilnCalculator calculator = new AntilnCalculator();
+        
+        assertEquals(1.0, calculator.calculateAntiln(0), 0.0001);
+        assertEquals(Math.E, calculator.calculateAntiln(1), 0.0001);
+        assertEquals(Math.exp(2), calculator.calculateAntiln(2), 0.0001);
+
 }

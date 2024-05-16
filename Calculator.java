@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,12 +58,14 @@ public class Calculator {
         return areaC;
     }
      // Function to calculate the area of a triangle
-    public static double areaOfTriangle(double base, double height) {
+    public static double calculateArea(double base, double height) {
         if (base <= 0 || height <= 0) {
             throw new IllegalArgumentException("Base and height must be positive numbers.");
         }
         return (base * height) / 2;
     } 
+  
+  
     //cercumstance of shapes
     public static double perimeterOfRectangle(double width,double height){
         double cercumstanceR=2*(width+height);
@@ -82,6 +83,9 @@ public class Calculator {
             double perimeterT=length1+length2+length3;
             return perimeterT;
          }
+    }    
+
+
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
@@ -332,6 +336,7 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+
         //function that calculates range function
         public static int calculateRange(int[] numbers) {
             if (numbers == null || numbers.length == 0) {
@@ -352,10 +357,17 @@ public class Calculator {
     
             return max - min;
         }
+
+          // Remainder
+
+    public static int calculateRemainder(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return dividend % divisor;
+    }
     
-          //mean
-    
-        
+          //mean    
     public static double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
@@ -400,7 +412,13 @@ public class Calculator {
         
         return mode;
     }
+//calculating antiln 
+      public class AntilnCalculator {
 
+      public double calculateAntiln(double value) {
+        return Math.exp(value);
+    }
+}
 
 
 
