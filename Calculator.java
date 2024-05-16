@@ -63,20 +63,7 @@ public class Calculator {
             throw new IllegalArgumentException("Base and height must be positive numbers.");
         }
         return (base * height) / 2;
-    } 
-    //cercumstance of shapes
-    public static double cercumstanceOfRectangle(double width,double height){
-        double cercumstanceR=2*(width+height);
-              return cercumstanceR;
-         }
-         public static double cercumstanceOfSquare(double length){
-          double cercumstanceS=4*(length);
-          return cercumstanceS;
-         }  
-         public static double cercumstanceOfcircle(double radius){
-          double cercumstanceC=2*radius*Math.pi;
-          return cercumstanceC;
-         }  
+    }    
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
