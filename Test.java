@@ -568,3 +568,18 @@ import org.junit.Test;
         assertEquals(Math.exp(2), calculator.calculateAntiln(2), 0.0001);
 
 }
+//antilogarithm function 
+     import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class AntilogCalculatorTest {
+
+    @Test
+    public void testCalculateAntilog() {
+        AntilogCalculator calculator = new AntilogCalculator();
+        
+        assertEquals(10.0, calculator.calculateAntilog(10, 1), 0.0001);
+        assertEquals(100.0, calculator.calculateAntilog(10, 2), 0.0001);
+        assertEquals(1000.0, calculator.calculateAntilog(10, 3), 0.0001);
+    }
+}
