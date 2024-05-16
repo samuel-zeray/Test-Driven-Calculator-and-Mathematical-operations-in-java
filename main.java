@@ -33,7 +33,12 @@ public class Main {
             System.out.println("20. perimeter of rectangle");
             System.out.println("21. perimeter of square");
             System.out.println("22. circumference of circle");
-            System.out.println("23. perimeter of tringle");
+          //semere's functions chioce
+            System.out.println("23. Trigonometric");
+            System.out.println("24. Median");
+            System.out.println("25. Area of Triangle");
+          //mati's functions chioce
+            System.out.println("26. perimeter of tringle");
 
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
@@ -111,24 +116,24 @@ public class Main {
                 case 10:
                    System.out.println("Enter first number:");
                     double second = scanner.nextDouble();
-                    result = calculator.  secondsToMilliseconds(second);
+                    result = calculator.secondsToMilliseconds(second);
                     System.out.println("Result: " + result);
                     break;                     
                  case 11:
-                   System.out.println("Enter first number:");
+                    System.out.println("Enter first number:");
                     double degree = scanner.nextDouble();
                     result = calculator.degreesToRadians(degree);
                     System.out.println("Result: " + result);
                     break;                   
-                    case 12:
+                  case 12:
                     System.out.println("Enter the number:");
-                       double num1 = scanner.nextInt();
-                       double num2 = scanner.nextInt();
+                         double num1 = scanner.nextInt();
+                         double num2 = scanner.nextInt();
                        result = calculator.calculateaddition( num1,num2);
                        System.out.println("Result: " + result);
                        break;
                    case 13:
-                   System.out.println("Enter first number:");
+                      System.out.println("Enter first number:");
                            double num3 = scanner.nextInt();
                            double num4 = scanner.nextInt();
                        result = calculator.calculatesubtraction(n,r);
@@ -136,7 +141,7 @@ public class Main {
                        break;
                                  
                    case 14:
-                   System.out.println("Enter first number:");
+                       System.out.println("Enter first number:");
                            double num5 = scanner.nextInt();
                            double num6= scanner.nextInt();
                        result = calculator.calculatemultiplication(n,r);
@@ -198,13 +203,99 @@ public class Main {
                              result = calculator.circumfrenceOfcircle(celsius);
                          System.out.println("Result: " + result);
                         break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-                    break;
+                    case 23:
+                        boolean exit = false;
+                        while (!exit) {
+                            System.out.println("Select an option:");
+                            System.out.println("1. Calculate Sine");
+                            System.out.println("2. Calculate Cosine");
+                            System.out.println("3. Calculate Tangent");
+                            System.out.println("4. Exit");
+                            int choose = scanner.nextInt();
+
+                            switch (choose) {
+                                case 1:
+                                    System.out.print("Enter angle in degrees: ");
+                                    double angleSin = scanner.nextDouble();
+                                    System.out.println("Sine of " + angleSin + " degrees: " + Math.sin(Math.toRadians(angleSin)));
+                                    break;
+                                case 2:
+                                    System.out.print("Enter angle in degrees: ");
+                                    double angleCos = scanner.nextDouble();
+                                    System.out.println("Cosine of " + angleCos + " degrees: " + Math.cos(Math.toRadians(angleCos)));
+                                    break;
+                                case 3:
+                                    System.out.print("Enter angle in degrees: ");
+                                    double angleTan = scanner.nextDouble();
+                                    System.out.println("Tangent of " + angleTan + " degrees: " + Math.tan(Math.toRadians(angleTan)));
+                                    break;
+                                case 4:
+                                    exit = true;
+                                    break;
+                                default:
+                                    System.out.println("Invalid choice. Please select again.");
+                            }
+                            System.out.println();
+                            break;    
+                        }
+                    case 24:
+                          // Prompt user to enter the number of elements
+                          System.out.print("Enter the number of elements: ");
+                          int num = scanner.nextInt();
+
+                          // Create an array to hold the user's numbers
+                          double[] numbers = new double[num];
+
+                          // Prompt user to enter each number
+                          System.out.println("Enter the numbers:");
+                          for (int i = 0; i < num; i++) {
+                              numbers[i] = scanner.nextDouble();
+                          }
+
+                          // Calculate and print the median
+                          double median = calculateMedian(numbers);
+                          System.out.println("Median of the entered numbers: " + median);
+                          break;
+                    case 25:
+                           // Prompt user to enter the sides of the triangle
+                          System.out.print("Enter the length of the first side: ");
+                          double side1 = scanner.nextDouble();
+
+                          System.out.print("Enter the length of the second side: ");
+                          double side2 = scanner.nextDouble();
+
+                          System.out.print("Enter the length of the third side: ");
+                          double side3 = scanner.nextDouble();
+
+                          // Calculate the area of the triangle
+                          double area = calculateArea(side1, side2, side3);
+
+                          // Display the result
+                          System.out.println("The area of the triangle is: " + area);
+                          break; 
+                    case 26:
+                         // Prompt user to enter the sides of the triangle
+                        System.out.print("Enter the length of the first side: ");
+                        double length1 = scanner.nextDouble();
+
+                        System.out.print("Enter the length of the second side: ");
+                        double length2= scanner.nextDouble();
+
+                        System.out.print("Enter the length of the third side: ");
+                        double length3 = scanner.nextDouble();
+
+                        // Calculate the perimeter of the triangle
+                        double perimeter = perimeterOftriangle(length1, length2, length3);
+
+                        // Display the result
+                        System.out.println("The perimeter of the triangle is: " + perimeter);
+                        break; 
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                        break;
             }
             scanner.nextLine();
         }
-
         scanner.close();
     }
 }
