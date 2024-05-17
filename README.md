@@ -9,7 +9,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 ## Project Description
-Welcome to the Mathematical Calculator project! This project provides a comprehensive calculator functionality with support for basic arithmetic operations, trigonometric functions, and more.
+Welcome to the Mathematical Calculator project! This project provides a comprehensive calculator functionality and Mathematical operations with support for basic arithmetic operations, trigonometric functions, and more.
 
 ## Features
 
