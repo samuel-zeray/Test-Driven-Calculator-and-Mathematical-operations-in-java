@@ -577,10 +577,11 @@ public class Test {
 // cylinder 
 
     @Test
-    public void testSurfaceArea() {
+    public void areaCylinder() {
         sample. Cylinder(2, 5);
         double expected = 2 * Math.PI * 2 * (2 + 5); // 2πr(r + h)
         assertEquals(expected, sample.surfaceArea(), 0.0001);
     }
     
 }
+// ends
