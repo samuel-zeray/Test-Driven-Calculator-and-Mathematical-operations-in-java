@@ -526,7 +526,7 @@ System.out.println("enter the radius");
 System.out.println("enter the height");
        double height=scanner.nextDouble();
      //calculate surface area cylinder 
-         double area=surfaceArea(height, radius);
+         double area=areaCylinder (height, radius);
 System.out.println("the area of cylinder is"+area);
 
 
