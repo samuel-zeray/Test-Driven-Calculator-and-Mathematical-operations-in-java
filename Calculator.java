@@ -389,11 +389,11 @@ public class Calculator {
     }
 
            // Mode
+
     public static int findMode(int[] nums) {
         if (nums == null || nums.length == 0) {
             throw new IllegalArgumentException("Array is empty or null");
         }
-        
         // Create a frequency map to store the count of each number
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         for (int num : nums) {
@@ -411,7 +411,9 @@ public class Calculator {
         }
         
         return mode;
-    }
+        }
+
+
 //calculating antiln 
       public class AntilnCalculator {
 
@@ -419,16 +421,18 @@ public class Calculator {
         return Math.exp(value);
     }
 }
+
+
 //calculating antilogarithm function 
 public class AntilogCalculator {
 
     public double calculateAntilog(double base, double value) {
         return Math.pow(base, value);
     }
-}
+                             }
 
 
-    }    
+    }   //End 
 
     
        
