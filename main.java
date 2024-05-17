@@ -77,9 +77,9 @@ system.out.println("27.area of cylinder");
                     result = calculator.calculateCombination(n,r);
                     System.out.println("Result: " + result);
                     break;
-                                case 4:
+                case 4:
 
- boolean exit = false;
+                             boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert Meter to Centimeter");
@@ -101,17 +101,17 @@ system.out.println("27.area of cylinder");
                                             break; 
                                 case 3:
                                     exit = true;
-                                    break;
-                                default:
-                                    System.out.println("Invalid choice. Please select again.");
-                            }
-                            System.out.println();
-                            break;    
-                        }
+                                     break;
+                                    default:
+                                  System.out.println("Invalid choice. Please select again.");
+                                                }
+                                                System.out.println();
+                                                break;    
+                                            }
                   
                 case 5:
 
- boolean exit = false;
+                              boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert squareMeter to SquareCentimeter");
@@ -141,7 +141,7 @@ system.out.println("27.area of cylinder");
                             break;    
                         }
                 case 6:            
- boolean exit = false;
+                                  boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert cubicMeter to CubicCentimeter");
@@ -158,7 +158,7 @@ system.out.println("27.area of cylinder");
                                 case 2:
                                        System.out.println("Enter number in Cubic Centimeter:");
                                             double CubicCentimeter = scanner.nextDouble();
-                                            result = calculator.cubicMeterToCubicCentimeter(CubicCentimeter);
+                                            result = calculator.cubicCentimeterToCubicmeter(CubicCentimeter);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -174,21 +174,21 @@ system.out.println("27.area of cylinder");
                      boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
-                            System.out.println("1. convert Meter to Centimeter");
-                            System.out.println("2. convert centimeter to Meter");
+                            System.out.println("1. convert kilogram to gram");
+                            System.out.println("2. convert gram to kilogram");
                             System.out.println("3. Exit");
                             int choose = scanner.nextInt();
                             switch (choose) {
                                 case 1:
-                                        System.out.println("Enter number in Meter:");
-                                            double meter = scanner.nextDouble();
-                                            result = calculator.meterToCentimeter(meter);
+                                        System.out.println("Enter number in kilogram:");
+                                            double kilogram = scanner.nextDouble();
+                                            result = calculator.kilogramToGram(kilogram);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 2:
-                                       System.out.println("Enter number in centimeter:");
-                                            double centimeter = scanner.nextDouble();
-                                            result = calculator.centimeterToMeter(centimeter);
+                                       System.out.println("Enter number in gram:");
+                                            double gram = scanner.nextDouble();
+                                            result = calculator.gramToKilogram(gram);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -200,35 +200,57 @@ system.out.println("27.area of cylinder");
                             System.out.println();
                             break;    
                         }
-                  
-                   System.out.println("Enter first number:");
-                    double kilogram = scanner.nextDouble();
-                    result = calculator.kilogramToGram(kilogram);
-                    System.out.println("Result: " + result);
-                    break; 
 
                 case 8:
                       boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
-                            System.out.println("1. convert Meter to Centimeter");
-                            System.out.println("2. convert centimeter to Meter");
-                            System.out.println("3. Exit");
+                            System.out.println("1. convert celsius to Fahrenheit");
+                            System.out.println("2. convert celsius to kelvin");
+                            System.out.println("3. convert Fahrenheit to celsius");
+                            System.out.println("4. convert Fahrenheit to kelvin");
+                            System.out.println("5. convert kelvin to celsius");
+                            System.out.println("6. convert kelvin to Fahrenheit");
+                            System.out.println("0. Exit");
                             int choose = scanner.nextInt();
                             switch (choose) {
                                 case 1:
-                                        System.out.println("Enter number in Meter:");
-                                            double meter = scanner.nextDouble();
-                                            result = calculator.meterToCentimeter(meter);
+                                        System.out.println("Enter number in celsius:");
+                                            double celsius = scanner.nextDouble();
+                                            result = calculator.celsiusToFahrenheit(celsius);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 2:
-                                       System.out.println("Enter number in centimeter:");
-                                            double centimeter = scanner.nextDouble();
-                                            result = calculator.centimeterToMeter(centimeter);
+                                       System.out.println("Enter number in celsius:");
+                                            double celsius = scanner.nextDouble();
+                                            result = calculator.celsiusToKelvin(celsius);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
+                                       System.out.println("Enter number in fahrenheit:");
+                                            double fahrenheit = scanner.nextDouble();
+                                            result = calculator.fahrenheitToCelsius(fahrenheit);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 4:
+                                       System.out.println("Enter number in fahrenheit:");
+                                            double fahrenheit = scanner.nextDouble();
+                                            result = calculator.fahrenheitToKelvin(fahrenheit);
+                                            System.out.println("Result: " + result);
+                                            break;
+                                case 5:
+                                       System.out.println("Enter number in kelvin:");
+                                            double kelvin = scanner.nextDouble();
+                                            result = calculator.kelvinToCelsius(kelvin);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 6:
+                                       System.out.println("Enter number in kelvin:");
+                                            double kelvin = scanner.nextDouble();
+                                            result = calculator.kelvinToFahrenheit(kelvin);
+                                            System.out.println("Result: " + result);
+                                            break;
+                                case 0:
                                     exit = true;
                                     break;
                                 default:
@@ -248,24 +270,60 @@ system.out.println("27.area of cylinder");
                       boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
-                            System.out.println("1. convert Meter to Centimeter");
-                            System.out.println("2. convert centimeter to Meter");
-                            System.out.println("3. Exit");
+                            System.out.println("1. convert second to millisecond");
+                            System.out.println("2. convert seconds to Minutes");
+                            System.out.println("3. convert minutes to Seconds");
+                            System.out.println("4. convert hours to Minutes");
+                            System.out.println("5. convert days to Hours");
+                            System.out.println("6. convert weeks to Days");
+                            System.out.println("7. convert years to Days");
+                            System.out.println("0. Exit");
                             int choose = scanner.nextInt();
                             switch (choose) {
                                 case 1:
-                                        System.out.println("Enter number in Meter:");
-                                            double meter = scanner.nextDouble();
-                                            result = calculator.meterToCentimeter(meter);
+                                        System.out.println("Enter number in second:");
+                                            double second = scanner.nextDouble();
+                                            result = calculator.secondsToMilliseconds(second);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 2:
-                                       System.out.println("Enter number in centimeter:");
-                                            double centimeter = scanner.nextDouble();
-                                            result = calculator.centimeterToMeter(centimeter);
+                                       System.out.println("Enter number in second:");
+                                            double second = scanner.nextDouble();
+                                            result = calculator.secondsToMinutes(second);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
+                                       System.out.println("Enter number in minute:");
+                                            double minute = scanner.nextDouble();
+                                            result = calculator.minutesToSeconds(minute);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 4:
+                                       System.out.println("Enter number in hour:");
+                                            double hour = scanner.nextDouble();
+                                            result = calculator.hoursToMinutes(hour);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 5:
+                                       System.out.println("Enter number in day:");
+                                            double day = scanner.nextDouble();
+                                            result = calculator.daysToHours(day);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 6:
+                                       System.out.println("Enter number in week:");
+                                            double week = scanner.nextDouble();
+                                            result = calculator.weeksToDays(week);
+                                            System.out.println("Result: " + result);
+                                            break;
+                                case 7:
+                                       System.out.println("Enter number in year:");
+                                            double year = scanner.nextDouble();
+                                            result = calculator.yearsToDays(year);
+                                            System.out.println("Result: " + result);
+                                            break;                                
+                              
+                                case 0:
                                     exit = true;
                                     break;
                                 default:
@@ -274,34 +332,43 @@ system.out.println("27.area of cylinder");
                             System.out.println();
                             break;    
                         }
-                  
-                    System.out.println("Enter first number:");
-                     double meterpersecond = scanner.nextDouble();
-                     result = calculator.metersPerSecondToKilometersPerHour(meterpersecond);
-                     System.out.println("Result: " + result);
-                     break;                    
+                                   
                 case 10:
-                      boolean exit = false;
+                     boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
-                            System.out.println("1. convert Meter to Centimeter");
-                            System.out.println("2. convert centimeter to Meter");
-                            System.out.println("3. Exit");
+                            System.out.println("1. convert metersPerSecond to KilometersPerHour");
+                            System.out.println("2. convert kilometersPerHour to MetersPerSecond");
+                            System.out.println("3. convert milesPerHour to KilometersPerHour");
+                            System.out.println("4. convert kilometersPerHour to MilesPerHour");
+                            System.out.println("0. Exit");
                             int choose = scanner.nextInt();
                             switch (choose) {
                                 case 1:
-                                        System.out.println("Enter number in Meter:");
-                                            double meter = scanner.nextDouble();
-                                            result = calculator.meterToCentimeter(meter);
+                                        System.out.println("Enter number in meter per second:");
+                                            double mPerSec = scanner.nextDouble();
+                                            result = calculator.metersPerSecondToKilometersPerHour(mPerSec);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 2:
-                                       System.out.println("Enter number in centimeter:");
-                                            double centimeter = scanner.nextDouble();
-                                            result = calculator.centimeterToMeter(centimeter);
+                                       System.out.println("Enter number in km/h:");
+                                            double kmPerH = scanner.nextDouble();
+                                            result = calculator.kilometersPerHourToMetersPerSecond(kmPerH);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
+                                       System.out.println("Enter number in miles/h:");
+                                            double milesPerHour = scanner.nextDouble();
+                                            result = calculator.milesPerHourToKilometersPerHour(milesPerHour);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 4:
+                                       System.out.println("Enter number in km/h:");
+                                            double kmPerHour = scanner.nextDouble();
+                                            result = calculator.kilometersPerHourToMilesPerHour(kmPerHour);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 0:
                                     exit = true;
                                     break;
                                 default:
@@ -309,37 +376,26 @@ system.out.println("27.area of cylinder");
                             }
                             System.out.println();
                             break;    
-                        }
-                  
-                   System.out.println("Enter first number:");
-                    double second = scanner.nextDouble();
-                    result = calculator.secondsToMilliseconds(second);
-                    System.out.println("Result: " + result);
-                    break;                     
+                        }           
                  case 11:
-                    
-                    System.out.println("Enter first number:");
-                    double degree = scanner.nextDouble();
-                    result = calculator.degreesToRadians(degree);
-                    System.out.println("Result: " + result);
-                    break;   boolean exit = false;
+                           boolean exit = false;
                         while (!exit) {
                             System.out.println("Select an option:");
-                            System.out.println("1. convert Meter to Centimeter");
-                            System.out.println("2. convert centimeter to Meter");
+                            System.out.println("1. convert degrees to Radians");
+                            System.out.println("2. convert radians to Degrees");
                             System.out.println("3. Exit");
                             int choose = scanner.nextInt();
                             switch (choose) {
                                 case 1:
-                                        System.out.println("Enter number in Meter:");
-                                            double meter = scanner.nextDouble();
-                                            result = calculator.meterToCentimeter(meter);
+                                        System.out.println("Enter number in degree:");
+                                            double degree = scanner.nextDouble();
+                                            result = calculator.degreesToRadians(degree);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 2:
-                                       System.out.println("Enter number in centimeter:");
-                                            double centimeter = scanner.nextDouble();
-                                            result = calculator.centimeterToMeter(centimeter);
+                                       System.out.println("Enter number in radian:");
+                                            double radian = scanner.nextDouble();
+                                            result = calculator.radiansToDegrees(radian);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -351,6 +407,7 @@ system.out.println("27.area of cylinder");
                             System.out.println();
                             break;    
                         }
+                                    
                                     
                   case 12:
                     System.out.println("Enter the number:");
