@@ -77,24 +77,99 @@ system.out.println("27.area of cylinder";
                     result = calculator.calculateCombination(n,r);
                     System.out.println("Result: " + result);
                     break;
-                case 4:
-                    System.out.println("Enter first number:");
-                    double meter = scanner.nextDouble();
-                    result = calculator.meterToCentimeter(meter);
-                    System.out.println("Result: " + result);
-                    break;    
+                                case 4:
+
+ boolean exit = false;
+                        while (!exit) {
+                            System.out.println("Select an option:");
+                            System.out.println("1. convert Meter to Centimeter");
+                            System.out.println("2. convert centimeter to Meter");
+                            System.out.println("3. Exit");
+                            int choose = scanner.nextInt();
+                            switch (choose) {
+                                case 1:
+                                        System.out.println("Enter number in Meter:");
+                                            double meter = scanner.nextDouble();
+                                            result = calculator.meterToCentimeter(meter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 2:
+                                       System.out.println("Enter number in centimeter:");
+                                            double centimeter = scanner.nextDouble();
+                                            result = calculator.centimeterToMeter(centimeter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 3:
+                                    exit = true;
+                                    break;
+                                default:
+                                    System.out.println("Invalid choice. Please select again.");
+                            }
+                            System.out.println();
+                            break;    
+                        }
+                  
                 case 5:
-                   System.out.println("Enter first number:");
-                    double squareMeter = scanner.nextDouble();
-                    result = calculator.squareMeterToSquareCentimeter(squareMeter);
-                    System.out.println("Result: " + result);
-                    break; 
-                case 6:
-                   System.out.println("Enter first number:");
-                    double cubicMeter = scanner.nextDouble();
-                    result = calculator. cubicMeterToCubicCentimeter(cubicMeter);
-                    System.out.println("Result: " + result);
-                    break; 
+
+ boolean exit = false;
+                        while (!exit) {
+                            System.out.println("Select an option:");
+                            System.out.println("1. convert squareMeter to SquareCentimeter");
+                            System.out.println("2. convert SquareCentimeter to squareMeter");
+                            System.out.println("3. Exit");
+                            int choose = scanner.nextInt();
+                            switch (choose) {
+                                case 1:
+                                        System.out.println("Enter number in squareMeter:");
+                                            double squareMeter = scanner.nextDouble();
+                                            result = calculator.squareMeterToSquareCentimeter(squareMeter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 2:
+                                       System.out.println("Enter number in Square Centimeter:");
+                                            double SquareCentimeter = scanner.nextDouble();
+                                            result = calculator.squareCentimeterToSquareMeter(SquareCentimeter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 3:
+                                    exit = true;
+                                    break;
+                                default:
+                                    System.out.println("Invalid choice. Please select again.");
+                            }
+                            System.out.println();
+                            break;    
+                        }
+                case 6:            
+ boolean exit = false;
+                        while (!exit) {
+                            System.out.println("Select an option:");
+                            System.out.println("1. convert cubicMeter to CubicCentimeter");
+                            System.out.println("2. convert CubicCentimeter to cubicMeter");
+                            System.out.println("3. Exit");
+                            int choose = scanner.nextInt();
+                            switch (choose) {
+                                case 1:
+                                        System.out.println("Enter number in cubicMeter:");
+                                            double cubicMeter = scanner.nextDouble();
+                                            result = calculator.cubicMeterToCubicCentimeter(cubicMeter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 2:
+                                       System.out.println("Enter number in Cubic Centimeter:");
+                                            double CubicCentimeter = scanner.nextDouble();
+                                            result = calculator.cubicMeterToCubicCentimeter(CubicCentimeter);
+                                            System.out.println("Result: " + result);
+                                            break; 
+                                case 3:
+                                    exit = true;
+                                    break;
+                                default:
+                                    System.out.println("Invalid choice. Please select again.");
+                            }
+                            System.out.println();
+                            break;    
+                        }
                 case 7:
                    System.out.println("Enter first number:");
                     double kilogram = scanner.nextDouble();
