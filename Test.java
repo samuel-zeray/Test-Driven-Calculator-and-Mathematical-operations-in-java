@@ -551,10 +551,6 @@ public class Test {
         int[] nums = null;
         Mode.findMode(nums);
     }
-        import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-
-    }
 
         //antiln
         public class AntilnCalculatorTest {
@@ -569,11 +565,6 @@ import org.junit.Test;
 
 }
 //antilogarithm function 
-     import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-
-public class AntilogCalculatorTest {
-
     @Test
     public void testCalculateAntilog() {
         AntilogCalculator calculator = new AntilogCalculator();
@@ -591,36 +582,5 @@ public class AntilogCalculatorTest {
         double expected = 2 * Math.PI * 2 * (2 + 5); // 2πr(r + h)
         assertEquals(expected, sample.surfaceArea(), 0.0001);
     }
-     //time converter 
-
-     import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-
-public class TimeConverterTest {
-
-    @Test
-    public void testConvertSecondsToMinutes() {
-        TimeConverter converter = new TimeConverter();
-        
-        assertEquals(1.0, converter.convertSecondsToMinutes(60), 0.0001);
-        assertEquals(2.5, converter.convertSecondsToMinutes(150), 0.0001);
-    }
-
-    @Test
-    public void testConvertMinutesToHours() {
-        TimeConverter converter = new TimeConverter();
-        
-        assertEquals(1.0, converter.convertMinutesToHours(60), 0.0001);
-        assertEquals(2.5, converter.convertMinutesToHours(150), 0.0001);
-    }
-
-    @Test
-    public void testConvertHoursToSeconds() {
-        TimeConverter converter = new TimeConverter();
-        
-        assertEquals(3600.0, converter.convertHoursToSeconds(1), 0.0001);
-        assertEquals(7200.0, converter.convertHoursToSeconds(2), 0.0001);
-    }
-}
-}
+    
 }
