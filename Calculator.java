@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,18 +30,19 @@ public class Calculator {
                //body mass index tip
     public static double bodyMassIndex(double weight,double height){
                 double BMI=(weight/Math.pow(height,2));
-                if (BMI<0){
+                if (BMI<0.0){
                     throw new IllegalArgumentException("Tbmi cann't be negative");
                 }
-                if(BMI<18){
-                     return -1;//underweight
+                if(BMI<18.0){
+                     return -1.0;//underweight
                  }
-                if(BMI>18||BMI<30){
-                    return 0;//normal
+                if(BMI>18.0||BMI<30.0){
+                    return 0.0;//normal
                  }
-               if(BMI>30){
-                return 1;//overweight
+               if(BMI>30.0){
+                return 1.0;//overweight
                  }
+            return BMI;
             }
    //shapes area computation
     public static double areaOfRectangle(double width,double height){
@@ -53,17 +53,39 @@ public class Calculator {
         double areaS=Math.pow(length,2);
         return areaS;
     }  
-    public static double areaOfcircle(double radius){
+    public static double areaOfCircle(double radius){
         double areaC=Math.PI*Math.pow(radius, 2);
         return areaC;
     }
      // Function to calculate the area of a triangle
-    public static double areaOfTriangle(double base, double height) {
+    public static double calculateArea(double base, double height) {
         if (base <= 0 || height <= 0) {
             throw new IllegalArgumentException("Base and height must be positive numbers.");
         }
         return (base * height) / 2;
+    } 
+  
+  
+    //cercumstance of shapes
+    public static double perimeterOfRectangle(double width,double height){
+        double cercumstanceR=2*(width+height);
+              return cercumstanceR;
+         }
+         public static double perimeterOfSquare(double length){
+          double perimeterS=4*(length);
+          return perimeterS;
+         }  
+         public static double circumfrenceOfcircle(double radius){
+          double circumfrenceC=2*radius*Math.PI;
+          return circumfrenceC;
+         } 
+         public static double perimeterOftriangle(double length1,double length2,double length3) {
+            double perimeterT=length1+length2+length3;
+            return perimeterT;
+         }
     }    
+
+
     //Trigonometric calculations
     public static double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
@@ -75,9 +97,9 @@ public class Calculator {
         return Math.tan(Math.toRadians(angleInDegrees));
     }
                 //Median
-    public static double calculateMedian(int[] numbers) {
+    public static double calculateMedian(int[] , numbers) {
         // Sort the array
-        Arrays.sort(numbers);        
+        arrays.sort(numbers);        
         int length = numbers.length;
         double median;
         if (length % 2 == 0) {
@@ -335,6 +357,15 @@ public class Calculator {
     
             return max - min;
         }
+
+          // Remainder
+
+    public static int calculateRemainder(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return dividend % divisor;
+    }
     
           //mean    
     public static double calculateMean(int[] numbers) {
@@ -381,8 +412,20 @@ public class Calculator {
         
         return mode;
     }
+//calculating antiln 
+      public class AntilnCalculator {
 
+      public double calculateAntiln(double value) {
+        return Math.exp(value);
+    }
+}
+//calculating antilogarithm function 
+public class AntilogCalculator {
 
+    public double calculateAntilog(double base, double value) {
+        return Math.pow(base, value);
+    }
+}
 
 
     }    

@@ -1,10 +1,16 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 
 public class Test {
      Calculator sample= new Calculator();
      //basic areas shape computation
+     @Test
+     public void testperimeterOftriangle(){
+        assertEquals(2.0,sample.perimeterOftriangle(3.0,2.0,3.0));
+        assertEquals(9.0,sample.perimeterOftriangle(3.0,3.0,3.0));
+     }
     @Test
     public void testAreaOfRectangle(){
         assertEquals(1.0,sample.areaOfRectangle(3.0,1.0)); 
@@ -12,8 +18,8 @@ public class Test {
     }
     @Test
     public void testAreaOfSquare(){
-        assertEquals(25,sample.areaOfRectangle(5)); 
-        assertEquals(15,sample.areaOfRectangle(4)); 
+        assertEquals(25,sample.areaOfSquare(5)); 
+        assertEquals(15,sample.areaOfSquare(4)); 
     }
     @Test
     public void testAreaOfCircle(){
@@ -59,19 +65,19 @@ public class Test {
     }
     //cercumcetance of shapes
     @Test
-    public void testcercumcetanceRectangle(){
-        assertEquals(1.0,sample.cercumcetanceRectangle(3.0,1.0)); 
-        assertEquals(8.0,sample.cercumcetanceRectangle(2.0,2.0)); 
+    public void testperimeterRectangle(){
+        assertEquals(1.0,sample.perimeterOfRectangle(3.0,1.0)); 
+        assertEquals(8.0,sample.perimeterOfRectangle(2.0,2.0)); 
     }
     @Test
-    public void testcercumcetanceSquare(){
-        assertEquals(20.0,sample.cercumcetanceSquare(5)); 
-        assertEquals(15.0,sample.cercumcetanceSquare(4)); 
+    public void testperimeterSquare(){
+        assertEquals(20.0,sample.perimeterOfSquare(5)); 
+        assertEquals(15.0,sample.perimeterOfSquare(4)); 
     }
     @Test
-    public void testcercumcetanceCircle(){
-        assertEquals(100,sample.cercumcetanceCircle(50.0)); 
-        assertEquals(62.8,sample.cercumcetanceCircle(10.0)); 
+    public void testcircumferenceCircle(){
+        assertEquals(100,sample.circumfrenceOfcircle(50.0)); 
+        assertEquals(62.8,sample.circumfrenceOfcircle(10.0)); 
     }
       //body mass index
     @Test
@@ -143,7 +149,7 @@ public class Test {
     @Test
     public void testMedian() {
         int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
-        ouble expectedMedian = 5.0;
+        double expectedMedian = 5.0;
         double median = calculateMedian(numbers);
         assertEquals(expectedMedian, median, 0.001);
     }
@@ -472,7 +478,22 @@ public class Test {
         double expectedMean = 3.0;
         double actualMean =sample.calculateMean(numbers);
         assertEquals(expectedMean, actualMean, 0.001);
+      }
+
+        // Remainder 
+
+    @Test
+    public void testCalculateRemainder() {
+        assertEquals(1, Remainder.calculateRemainder(5, 2));
+        assertEquals(0, Remainder.calculateRemainder(10, 2));
+        assertEquals(3, Remainder.calculateRemainder(11, 4));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        Remainder.calculateRemainder(10, 0);
+    }
+        
      
              // Absolute value
     @Test(expected = IllegalArgumentException.class)
@@ -529,5 +550,36 @@ public class Test {
     public void testFindModeWithNullArray() {
         int[] nums = null;
         Mode.findMode(nums);
+    }
+        import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+    }
+
+        //antiln
+        public class AntilnCalculatorTest {
+
+    @Test
+    public void testCalculateAntiln() {
+        AntilnCalculator calculator = new AntilnCalculator();
+        
+        assertEquals(1.0, calculator.calculateAntiln(0), 0.0001);
+        assertEquals(Math.E, calculator.calculateAntiln(1), 0.0001);
+        assertEquals(Math.exp(2), calculator.calculateAntiln(2), 0.0001);
+
+}
+//antilogarithm function 
+     import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class AntilogCalculatorTest {
+
+    @Test
+    public void testCalculateAntilog() {
+        AntilogCalculator calculator = new AntilogCalculator();
+        
+        assertEquals(10.0, calculator.calculateAntilog(10, 1), 0.0001);
+        assertEquals(100.0, calculator.calculateAntilog(10, 2), 0.0001);
+        assertEquals(1000.0, calculator.calculateAntilog(10, 3), 0.0001);
     }
 }
