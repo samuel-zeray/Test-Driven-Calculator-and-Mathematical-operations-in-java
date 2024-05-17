@@ -432,6 +432,33 @@ public class AntilogCalculator {
                              }
 
 
+// Cylinder 
+ 
+
+    public Cylinder(double radius, double height) {
+        this.radius = radius;
+        this.height = height;
+    }
+
+    public double surfaceArea() {
+        return 2 * Math.PI * radius * (radius + height);
+   
+}
+     //time converter 
+    public class TimeConverter {
+
+    public double convertSecondsToMinutes(double seconds) {
+        return seconds / 60;
+    }
+
+    public double convertMinutesToHours(double minutes) {
+        return minutes / 60;
+    }
+
+    public double convertHoursToSeconds(double hours) {
+        return hours * 3600;
+    }
+}
     }   //End 
 
     

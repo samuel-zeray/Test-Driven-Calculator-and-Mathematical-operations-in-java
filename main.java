@@ -39,6 +39,8 @@ public class Main {
             System.out.println("25. Area of Triangle");
           //mati's functions chioce
             System.out.println("26. perimeter of tringle");
+         //area cylinder 
+system.out.println("27.area of cylinder";
 
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
