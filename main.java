@@ -40,7 +40,7 @@ public class Main {
           //mati's functions chioce
             System.out.println("26. perimeter of tringle");
          //area cylinder 
-system.out.println("27.area of cylinder";
+system.out.println("27.area of cylinder");
 
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
@@ -517,7 +517,20 @@ system.out.println("27.area of cylinder";
                         // Display the result
                         System.out.println("The perimeter of the triangle is: " + perimeter);
                         break; 
-                    default:
+
+
+ //prompt the user enter the radius and height of cylinder 
+                   case 27:
+System.out.println("enter the radius");
+          double radius=scanner.nextDouble();
+System.out.println("enter the height");
+       double height=scanner.nextDouble();
+     //calculate surface area cylinder 
+         double area=surfaceArea(height, radius);
+System.out.println("the area of cylinder is"+area);
+
+
+                   default:
                         System.out.println("Invalid choice. Please try again.");
                         break;
             }
