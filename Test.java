@@ -589,7 +589,7 @@ public class AntilogCalculatorTest {
     public void testSurfaceArea() {
         sample. Cylinder(2, 5);
         double expected = 2 * Math.PI * 2 * (2 + 5); // 2πr(r + h)
-        assertEquals(expected, cylinder.surfaceArea(), 0.0001);
+        assertEquals(expected, sample.surfaceArea(), 0.0001);
     }
 }
 }
