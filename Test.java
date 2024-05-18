@@ -634,6 +634,30 @@ public class Test {
         assertEquals(72, LCM.findLCM(18, -24));
         assertEquals(72, LCM.findLCM(-18, -24));
     }
+             //Percentage
+     @Test
+    public void testCalculatePercentage() {
+        assertEquals(25.0, Percentage.calculatePercentage(25, 100), 0.001);
+        assertEquals(20.0, Percentage.calculatePercentage(50, 250), 0.001);
+        assertEquals(40.0, Percentage.calculatePercentage(8, 20), 0.001);
+        assertEquals(10.0, Percentage.calculatePercentage(10, 100), 0.001);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculatePercentageWithZeroTotal() {
+        Percentage.calculatePercentage(10, 0);
+    }
+
+    @Test
+    public void testCalculatePercentageWithZeroNumber() {
+        assertEquals(0.0, Percentage.calculatePercentage(0, 100), 0.001);
+    }
+
+    @Test
+    public void testCalculatePercentageWithZeroBoth() {
+        assertEquals(0.0, Percentage.calculatePercentage(0, 0), 0.001);
+    }
+
        
 
 
