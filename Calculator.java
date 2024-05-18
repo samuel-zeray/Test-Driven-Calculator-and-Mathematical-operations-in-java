@@ -450,6 +450,19 @@ public class Calculator {
         }   
         return a;
                          } 
+            //LCM
+    public static int findLCM(int a, int b) {
+        // Ensure a is greater than or equal to b
+        if (a < b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        // LCM is (a * b) / GCD(a, b)
+        return (a / GCD.findGCD(a, b)) * b;
+    }
+
 
 
   
