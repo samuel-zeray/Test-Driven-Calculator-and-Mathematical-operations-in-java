@@ -462,6 +462,16 @@ public class Calculator {
         // LCM is (a * b) / GCD(a, b)
         return (a / GCD.findGCD(a, b)) * b;
     }
+              //percentage
+    public static double calculatePercentage(double number, double total) {
+        if (total == 0) {
+            throw new IllegalArgumentException("Total cannot be zero");
+        }
+
+        // Calculate percentage
+        return (number / total) * 100.0;
+    }
+
 
 
 
