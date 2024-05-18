@@ -423,20 +423,35 @@ public class Calculator {
 }
 
 
-//calculating antilogarithm function 
-public class AntilogCalculator {
+          //calculating antilogarithm function 
 
     public double calculateAntilog(double base, double value) {
-        return Math.pow(base, value);
-    }
-                             }
+        return Math.pow(base, value); }
 
-   // arae Cylinder 
-
+              // arae Cylinder 
     public double areaCylinder() {
         return 2 * Math.PI * radius * (radius + height);
-   
-}
+             }
+
+                 // GCD
+    public static int findGCD(int a, int b) {
+        // Ensure a is greater than or equal to b
+        if (a < b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        // Apply Euclidean algorithm
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }   
+        return a;
+                         } 
+
+
   
 }//End 
 
