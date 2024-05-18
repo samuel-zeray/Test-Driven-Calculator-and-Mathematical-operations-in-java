@@ -582,6 +582,36 @@ public class Test {
         double expected = 2 * Math.PI * 2 * (2 + 5); // 2πr(r + h)
         assertEquals(expected, sample.surfaceArea(), 0.0001);
     }
-    
-}
-// ends
+
+             // GCD
+    @Test
+    public void testGCD() {
+        assertEquals(6, GCD.findGCD(18, 24));
+        assertEquals(5, GCD.findGCD(25, 30));
+        assertEquals(1, GCD.findGCD(17, 23));
+        assertEquals(9, GCD.findGCD(27, 36));
+        assertEquals(10, GCD.findGCD(100, 110));
+    }
+
+    @Test
+    public void testGCDWithZero() {
+        // GCD of any number with 0 is the number itself
+        assertEquals(5, GCD.findGCD(5, 0));
+        assertEquals(10, GCD.findGCD(0, 10));
+        assertEquals(0, GCD.findGCD(0, 0));
+    }
+
+    @Test
+    public void testGCDNegativeNumbers() {
+        // GCD should be same regardless of sign
+        assertEquals(6, GCD.findGCD(-18, 24));
+        assertEquals(6, GCD.findGCD(18, -24));
+        assertEquals(6, GCD.findGCD(-18, -24));
+    }
+
+             //LCM
+             
+
+
+             
+}// ends
