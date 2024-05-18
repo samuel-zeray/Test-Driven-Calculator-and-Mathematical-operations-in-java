@@ -610,7 +610,31 @@ public class Test {
     }
 
              //LCM
-             
+    @Test
+    public void testLCM() {
+        assertEquals(72, LCM.findLCM(18, 24));
+        assertEquals(150, LCM.findLCM(25, 30));
+        assertEquals(391, LCM.findLCM(17, 23));
+        assertEquals(108, LCM.findLCM(27, 36));
+        assertEquals(1100, LCM.findLCM(100, 110));
+    }
+
+    @Test
+    public void testLCMWithZero() {
+        // LCM of any number with 0 is always 0
+        assertEquals(0, LCM.findLCM(5, 0));
+        assertEquals(0, LCM.findLCM(0, 10));
+        assertEquals(0, LCM.findLCM(0, 0));
+    }
+
+    @Test
+    public void testLCMNegativeNumbers() {
+        // LCM should be positive regardless of sign
+        assertEquals(72, LCM.findLCM(-18, 24));
+        assertEquals(72, LCM.findLCM(18, -24));
+        assertEquals(72, LCM.findLCM(-18, -24));
+    }
+       
 
 
              
