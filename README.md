@@ -18,6 +18,34 @@ Welcome to the Mathematical Calculator project! This project provides a comprehe
 - Advanced mathematical functions: trigonometric, Inverse of trigonometric, logarithmic, exponential, radical
 - Factorial, Permutation,  and Combination calculations
 - User-friendly command-line interface
+- operations performed by this application
+            ("1. Factorial");
+            (2. Permutation");
+            ("3. Combination");
+            ("4. Length Converter");
+            ("5. Area Converter");
+            ("6. Volume Converter");
+            ("7. Mass Converter");
+            ("8. Temprature Converter");
+            ("9. Time Converter");
+            ("10. Speed Converter");
+            ("11. Angle Converter");
+            ("12. addition");
+            ("13. subtraction");
+            ("14. multiplication");
+            ("15. division");
+            ("16. body mass index");
+            ("17. rectangle area");
+            ("18. square area");
+            ("19. circle area");
+            ("20. perimeter of rectangle");
+            ("21. perimeter of square");
+            ("22. circumference of circle");
+            ("23. Trigonometric");
+            ("24. Median");
+            ("25. Area of Triangle");
+            ("26. perimeter of tringle");
+                       ...
 ## Prerequisites
 - jdk
 - java editor
