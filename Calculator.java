@@ -472,6 +472,32 @@ public class Calculator {
         return (number / total) * 100.0;
     }
 
+        //Fiabonacci series
+public static int calculateNthFibonacci(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Fibonacci sequence is not defined for negative numbers");
+        }
+
+        if (n == 0) {
+            return 0;
+        }
+
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        int fibMinus1 = 1;
+        int fibMinus2 = 1;
+        int fib = 0;
+
+        for (int i = 3; i <= n; i++) {
+            fib = fibMinus1 + fibMinus2;
+            fibMinus2 = fibMinus1;
+            fibMinus1 = fib;
+        }
+        return fib;
+    }
+
 
 
 
