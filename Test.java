@@ -658,8 +658,26 @@ public class Test {
         assertEquals(0.0, Percentage.calculatePercentage(0, 0), 0.001);
     }
 
-       
+  // Fiabonacci
+      @Test
+    public void testCalculateNthFibonacci() {
+        assertEquals(0, Fibonacci.calculateNthFibonacci(0));
+        assertEquals(1, Fibonacci.calculateNthFibonacci(1));
+        assertEquals(1, Fibonacci.calculateNthFibonacci(2));
+        assertEquals(2, Fibonacci.calculateNthFibonacci(3));
+        assertEquals(3, Fibonacci.calculateNthFibonacci(4));
+        assertEquals(5, Fibonacci.calculateNthFibonacci(5));
+        assertEquals(8, Fibonacci.calculateNthFibonacci(6));
+        assertEquals(13, Fibonacci.calculateNthFibonacci(7));
+        assertEquals(21, Fibonacci.calculateNthFibonacci(8));
+    }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateNthFibonacciWithNegativeInput() {
+        Fibonacci.calculateNthFibonacci(-1);
+    }
+
+  
 
              
 }// ends
