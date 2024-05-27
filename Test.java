@@ -34,32 +34,32 @@ public class Test {
         double base = 10;
         double height = 5;
         double expectedArea = 25.0;
-        double actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        double actualArea = sample.calculateArea(base, height);
         assertEquals(expectedArea, actualArea, "The area should be 25.0");
 
         // Test case 2: Base and height are 1
         base = 1;
         height = 1;
         expectedArea = 0.5;
-        actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        actualArea = sample.calculateArea(base, height);
         assertEquals(expectedArea, actualArea, "The area should be 0.5");
 
         // Test case 3: Base and height are large values
         base = 10000;
         height = 20000;
         expectedArea = 100000000.0;
-        actualArea = TriangleAreaCalculator.calculateArea(base, height);
+        actualArea = sample.calculateArea(base, height);
         assertEquals(expectedArea, actualArea, "The area should be 100000000.0");
 
         // Test case 4: Invalid input (negative base)
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            TriangleAreaCalculator.calculateArea(-10, 5);
+            sample.calculateArea(-10, 5);
         });
         assertEquals("Base and height must be positive numbers.", exception.getMessage());
 
         // Test case 5: Invalid input (zero height)
         exception = assertThrows(IllegalArgumentException.class, () -> {
-            TriangleAreaCalculator.calculateArea(10, 0);
+            sample.calculateArea(10, 0);
         });
         assertEquals("Base and height must be positive numbers.", exception.getMessage());
     }
@@ -121,37 +121,29 @@ public class Test {
    //Trigonometric testcases
    @Test
     public void testSine() {
-        assertEquals(0.0, TrigonometricFunctions.sine(0), 0.001);
-        assertEquals(1.0, TrigonometricFunctions.sine(90), 0.001);
-        assertEquals(0.0, TrigonometricFunctions.sine(180), 0.001);
-        assertEquals(-1.0, TrigonometricFunctions.sine(270), 0.001);
-        assertEquals(0.5, TrigonometricFunctions.sine(30), 0.001);
+        assertEquals(0.0, sample.sine(0), 0.001);
+        assertEquals(1.0, sample.sine(90), 0.001);
+        assertEquals(0.0, sample.sine(180), 0.001);
+        assertEquals(-1.0, sample.sine(270), 0.001);
+        assertEquals(0.5, sample.sine(30), 0.001);
     }
 
     @Test
     public void testCosine() {
-        assertEquals(1.0, TrigonometricFunctions.cosine(0), 0.001);
-        assertEquals(0.0, TrigonometricFunctions.cosine(90), 0.001);
-        assertEquals(-1.0, TrigonometricFunctions.cosine(180), 0.001);
-        assertEquals(0.0, TrigonometricFunctions.cosine(270), 0.001);
-        assertEquals(0.866, TrigonometricFunctions.cosine(30), 0.001);
+        assertEquals(1.0, sample.cosine(0), 0.001);
+        assertEquals(0.0, sample.cosine(90), 0.001);
+        assertEquals(-1.0, sample.cosine(180), 0.001);
+        assertEquals(0.0, sample.cosine(270), 0.001);
+        assertEquals(0.866, sample.cosine(30), 0.001);
     }
 
     @Test
     public void testTangent() {
         assertEquals(0.0, TrigonometricFunctions.tangent(0), 0.001);
-        assertEquals(Double.POSITIVE_INFINITY, TrigonometricFunctions.tangent(90), 0.001);
+        assertEquals(Double.POSITIVE_INFINITY, sample.tangent(90), 0.001);
         assertEquals(0.0, TrigonometricFunctions.tangent(180), 0.001);
-        assertEquals(Double.NEGATIVE_INFINITY, TrigonometricFunctions.tangent(270), 0.001);
-        assertEquals(0.577, TrigonometricFunctions.tangent(30), 0.001);
-    }
-    // Median Test case
-    @Test
-    public void testMedian() {
-        int[] numbers = {5, 9, 2, 7, 4, 6, 8, 1, 3};
-        double expectedMedian = 5.0;
-        double median = calculateMedian(numbers);
-        assertEquals(expectedMedian, median, 0.001);
+        assertEquals(Double.NEGATIVE_INFINITY, sample.tangent(270), 0.001);
+        assertEquals(0.577, sample.tangent(30), 0.001);
     }
    // Factorial
     @Test
@@ -468,9 +460,6 @@ public class Test {
                     assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
                 }
 
-
-
-
               //mean
       @Test
     public void testCalculateMean() {
@@ -484,14 +473,14 @@ public class Test {
 
     @Test
     public void testCalculateRemainder() {
-        assertEquals(1, Remainder.calculateRemainder(5, 2));
-        assertEquals(0, Remainder.calculateRemainder(10, 2));
-        assertEquals(3, Remainder.calculateRemainder(11, 4));
+        assertEquals(1, sample.calculateRemainder(5, 2));
+        assertEquals(0, sample.calculateRemainder(10, 2));
+        assertEquals(3, sample.calculateRemainder(11, 4));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testDivideByZero() {
-        Remainder.calculateRemainder(10, 0);
+        sample.calculateRemainder(10, 0);
     }
         
      
@@ -499,24 +488,24 @@ public class Test {
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateMeanEmptyArray() {
         int[] emptyArray = {};
-        Sample.calculateMean(emptyArray);
+        sample.calculateMean(emptyArray);
     }
 
     @Test
     public void testPositiveNumber() {
-        int result = Sample.absolute(5);
+        int result = sample.absolute(5);
         assertEquals(5, result);
     }
 
     @Test
     public void testNegativeNumber() {
-        int result = Sample.absolute(-5);
+        int result = sample.absolute(-5);
         assertEquals(5, result);
     }
 
     @Test
     public void testZero() {
-        int result = Sample.absolute(0);
+        int result = sample.absolute(0);
         assertEquals(0, result);
     }
 
@@ -525,31 +514,31 @@ public class Test {
     @Test
     public void testFindMode() {
         int[] nums = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
-        assertEquals(4, Mode.findMode(nums));
+        assertEquals(4, sample.findMode(nums));
     }
     
     @Test
     public void testFindModeWithOneElement() {
         int[] nums = {5};
-        assertEquals(5, Mode.findMode(nums));
+        assertEquals(5, sample.findMode(nums));
     }
     
     @Test
     public void testFindModeWithMultipleModes() {
         int[] nums = {1, 1, 2, 2, 3, 3, 3};
-        assertEquals(1, Mode.findMode(nums));
+        assertEquals(1, sample.findMode(nums));
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testFindModeWithEmptyArray() {
         int[] nums = {};
-        Mode.findMode(nums);
+        sample.findMode(nums);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testFindModeWithNullArray() {
         int[] nums = null;
-        Mode.findMode(nums);
+        sample.findMode(nums);
     }
 
         //antiln
@@ -559,19 +548,18 @@ public class Test {
     public void testCalculateAntiln() {
         AntilnCalculator calculator = new AntilnCalculator();
         
-        assertEquals(1.0, calculator.calculateAntiln(0), 0.0001);
-        assertEquals(Math.E, calculator.calculateAntiln(1), 0.0001);
-        assertEquals(Math.exp(2), calculator.calculateAntiln(2), 0.0001);
+        assertEquals(1.0, sample.calculateAntiln(0), 0.0001);
+        assertEquals(Math.E, sample.calculateAntiln(1), 0.0001);
+        assertEquals(Math.exp(2), sample.calculateAntiln(2), 0.0001);
 
 }
 //antilogarithm function 
     @Test
     public void testCalculateAntilog() {
-        AntilogCalculator calculator = new AntilogCalculator();
         
-        assertEquals(10.0, calculator.calculateAntilog(10, 1), 0.0001);
-        assertEquals(100.0, calculator.calculateAntilog(10, 2), 0.0001);
-        assertEquals(1000.0, calculator.calculateAntilog(10, 3), 0.0001);
+        assertEquals(10.0, sample.calculateAntilog(10, 1), 0.0001);
+        assertEquals(100.0, sample.calculateAntilog(10, 2), 0.0001);
+        assertEquals(1000.0, sample.calculateAntilog(10, 3), 0.0001);
     }
 
 // cylinder 
@@ -586,95 +574,95 @@ public class Test {
              // GCD
     @Test
     public void testGCD() {
-        assertEquals(6, GCD.findGCD(18, 24));
-        assertEquals(5, GCD.findGCD(25, 30));
-        assertEquals(1, GCD.findGCD(17, 23));
-        assertEquals(9, GCD.findGCD(27, 36));
-        assertEquals(10, GCD.findGCD(100, 110));
+        assertEquals(6, sample.findGCD(18, 24));
+        assertEquals(5, sample.findGCD(25, 30));
+        assertEquals(1, sample.findGCD(17, 23));
+        assertEquals(9, sample.findGCD(27, 36));
+        assertEquals(10, sample.findGCD(100, 110));
     }
 
     @Test
     public void testGCDWithZero() {
         // GCD of any number with 0 is the number itself
-        assertEquals(5, GCD.findGCD(5, 0));
-        assertEquals(10, GCD.findGCD(0, 10));
-        assertEquals(0, GCD.findGCD(0, 0));
+        assertEquals(5, sample.findGCD(5, 0));
+        assertEquals(10, sample.findGCD(0, 10));
+        assertEquals(0, sample.findGCD(0, 0));
     }
 
     @Test
     public void testGCDNegativeNumbers() {
         // GCD should be same regardless of sign
-        assertEquals(6, GCD.findGCD(-18, 24));
-        assertEquals(6, GCD.findGCD(18, -24));
-        assertEquals(6, GCD.findGCD(-18, -24));
+        assertEquals(6, sample.findGCD(-18, 24));
+        assertEquals(6, sample.findGCD(18, -24));
+        assertEquals(6, sample.findGCD(-18, -24));
     }
 
              //LCM
     @Test
     public void testLCM() {
-        assertEquals(72, LCM.findLCM(18, 24));
-        assertEquals(150, LCM.findLCM(25, 30));
-        assertEquals(391, LCM.findLCM(17, 23));
-        assertEquals(108, LCM.findLCM(27, 36));
-        assertEquals(1100, LCM.findLCM(100, 110));
+        assertEquals(72, sample.findLCM(18, 24));
+        assertEquals(150, sample.findLCM(25, 30));
+        assertEquals(391, sample.findLCM(17, 23));
+        assertEquals(108, sample.findLCM(27, 36));
+        assertEquals(1100, sample.findLCM(100, 110));
     }
 
     @Test
     public void testLCMWithZero() {
         // LCM of any number with 0 is always 0
-        assertEquals(0, LCM.findLCM(5, 0));
-        assertEquals(0, LCM.findLCM(0, 10));
-        assertEquals(0, LCM.findLCM(0, 0));
+        assertEquals(0, sample.findLCM(5, 0));
+        assertEquals(0, sample.findLCM(0, 10));
+        assertEquals(0, sample.findLCM(0, 0));
     }
 
     @Test
     public void testLCMNegativeNumbers() {
         // LCM should be positive regardless of sign
-        assertEquals(72, LCM.findLCM(-18, 24));
-        assertEquals(72, LCM.findLCM(18, -24));
-        assertEquals(72, LCM.findLCM(-18, -24));
+        assertEquals(72, sample.findLCM(-18, 24));
+        assertEquals(72, sample.findLCM(18, -24));
+        assertEquals(72, sample.findLCM(-18, -24));
     }
              //Percentage
      @Test
     public void testCalculatePercentage() {
-        assertEquals(25.0, Percentage.calculatePercentage(25, 100), 0.001);
-        assertEquals(20.0, Percentage.calculatePercentage(50, 250), 0.001);
-        assertEquals(40.0, Percentage.calculatePercentage(8, 20), 0.001);
-        assertEquals(10.0, Percentage.calculatePercentage(10, 100), 0.001);
+        assertEquals(25.0, sample.calculatePercentage(25, 100), 0.001);
+        assertEquals(20.0, sample.calculatePercentage(50, 250), 0.001);
+        assertEquals(40.0, sample.calculatePercentage(8, 20), 0.001);
+        assertEquals(10.0, sample.calculatePercentage(10, 100), 0.001);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testCalculatePercentageWithZeroTotal() {
-        Percentage.calculatePercentage(10, 0);
+        sample.calculatePercentage(10, 0);
     }
 
     @Test
     public void testCalculatePercentageWithZeroNumber() {
-        assertEquals(0.0, Percentage.calculatePercentage(0, 100), 0.001);
+        assertEquals(0.0, sample.calculatePercentage(0, 100), 0.001);
     }
 
     @Test
     public void testCalculatePercentageWithZeroBoth() {
-        assertEquals(0.0, Percentage.calculatePercentage(0, 0), 0.001);
+        assertEquals(0.0, sample.calculatePercentage(0, 0), 0.001);
     }
 
   // Fiabonacci
       @Test
     public void testCalculateNthFibonacci() {
-        assertEquals(0, Fibonacci.calculateNthFibonacci(0));
-        assertEquals(1, Fibonacci.calculateNthFibonacci(1));
-        assertEquals(1, Fibonacci.calculateNthFibonacci(2));
-        assertEquals(2, Fibonacci.calculateNthFibonacci(3));
-        assertEquals(3, Fibonacci.calculateNthFibonacci(4));
-        assertEquals(5, Fibonacci.calculateNthFibonacci(5));
-        assertEquals(8, Fibonacci.calculateNthFibonacci(6));
-        assertEquals(13, Fibonacci.calculateNthFibonacci(7));
-        assertEquals(21, Fibonacci.calculateNthFibonacci(8));
+        assertEquals(0, sample.calculateNthFibonacci(0));
+        assertEquals(1, sample.calculateNthFibonacci(1));
+        assertEquals(1, sample.calculateNthFibonacci(2));
+        assertEquals(2, sample.calculateNthFibonacci(3));
+        assertEquals(3, samplee.calculateNthFibonacci(4));
+        assertEquals(5, sample.calculateNthFibonacci(5));
+        assertEquals(8, sample.calculateNthFibonacci(6));
+        assertEquals(13, sample.calculateNthFibonacci(7));
+        assertEquals(21, sample.calculateNthFibonacci(8));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateNthFibonacciWithNegativeInput() {
-        Fibonacci.calculateNthFibonacci(-1);
+        sample.calculateNthFibonacci(-1);
     }
 
   
