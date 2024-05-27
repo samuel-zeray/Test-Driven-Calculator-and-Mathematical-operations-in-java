@@ -63,6 +63,25 @@ public class Test {
         });
         assertEquals("Base and height must be positive numbers.", exception.getMessage());
     }
+     //median 
+     @Test
+    public void testCalculateMedian() {
+        int[] numbers1 = {1, 2, 3, 4, 5};
+        assertEquals(3.0, sample.calculateMedian(numbers1), 0.001);
+
+        int[] numbers2 = {1, 2, 3, 4};
+        assertEquals(2.5, sample.calculateMedian(numbers2), 0.001);
+
+        int[] numbers3 = {5, 2, 1, 6, 3, 4};
+        assertEquals(3.5, sample.calculateMedian(numbers3), 0.001);
+
+        int[] numbers4 = {9};
+        assertEquals(9.0, sample.calculateMedian(numbers4), 0.001);
+
+        int[] numbers5 = {5, 2, 1, 6, 3};
+        assertEquals(3.0, sample.calculateMedian(numbers5), 0.001);
+    }
+
     //cercumcetance of shapes
     @Test
     public void testperimeterRectangle(){
@@ -542,11 +561,8 @@ public class Test {
     }
 
         //antiln
-        public class AntilnCalculatorTest {
-
     @Test
     public void testCalculateAntiln() {
-        AntilnCalculator calculator = new AntilnCalculator();
         
         assertEquals(1.0, sample.calculateAntiln(0), 0.0001);
         assertEquals(Math.E, sample.calculateAntiln(1), 0.0001);
