@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        Scanner scanner = new Scanner(System.in);
+public class main {
+    public static void main(String []args) {
+         Calculator calculator = new Calculator();
+         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Calculator App!");
+         System.out.println("Welcome to the Calculator App!");
 
-        while (true) {
+           while (true) {
             System.out.println("Select operation:");
 
             System.out.println("1. Factorial");
@@ -21,7 +21,7 @@ public class Main {
             System.out.println("9. Time Converter");
             System.out.println("10. Speed Converter");
             System.out.println("11. Angle Converter");
-    //mati's functions chioce
+               //mati's functions chioce
             System.out.println("12. addition");
             System.out.println("13. subtraction");
             System.out.println("14. multiplication");
@@ -40,7 +40,7 @@ public class Main {
           //mati's functions chioce
             System.out.println("26. perimeter of tringle");
          //area cylinder 
-system.out.println("27.area of cylinder");
+            System.out.println("27.area of cylinder");
 
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
@@ -111,8 +111,8 @@ system.out.println("27.area of cylinder");
                   
                 case 5:
 
-                              boolean exit = false;
-                        while (!exit) {
+                              boolean exits = false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert squareMeter to SquareCentimeter");
                             System.out.println("2. convert SquareCentimeter to squareMeter");
@@ -141,8 +141,8 @@ system.out.println("27.area of cylinder");
                             break;    
                         }
                 case 6:            
-                                  boolean exit = false;
-                        while (!exit) {
+                exits =false;  
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert cubicMeter to CubicCentimeter");
                             System.out.println("2. convert CubicCentimeter to cubicMeter");
@@ -158,7 +158,7 @@ system.out.println("27.area of cylinder");
                                 case 2:
                                        System.out.println("Enter number in Cubic Centimeter:");
                                             double CubicCentimeter = scanner.nextDouble();
-                                            result = calculator.cubicCentimeterToCubicmeter(CubicCentimeter);
+                                            result = calculator.cubicCentimeterToCubicMeter(CubicCentimeter);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -171,8 +171,8 @@ system.out.println("27.area of cylinder");
                             break;    
                         }
                 case 7:
-                     boolean exit = false;
-                        while (!exit) {
+                exits =false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert kilogram to gram");
                             System.out.println("2. convert gram to kilogram");
@@ -202,8 +202,8 @@ system.out.println("27.area of cylinder");
                         }
 
                 case 8:
-                      boolean exit = false;
-                        while (!exit) {
+                      exits =false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert celsius to Fahrenheit");
                             System.out.println("2. convert celsius to kelvin");
@@ -222,8 +222,8 @@ system.out.println("27.area of cylinder");
                                             break; 
                                 case 2:
                                        System.out.println("Enter number in celsius:");
-                                            double celsius = scanner.nextDouble();
-                                            result = calculator.celsiusToKelvin(celsius);
+                                            double cel = scanner.nextDouble();
+                                            result = calculator.celsiusToKelvin(cel);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -234,8 +234,8 @@ system.out.println("27.area of cylinder");
                                             break; 
                                 case 4:
                                        System.out.println("Enter number in fahrenheit:");
-                                            double fahrenheit = scanner.nextDouble();
-                                            result = calculator.fahrenheitToKelvin(fahrenheit);
+                                            double fahrenheits = scanner.nextDouble();
+                                            result = calculator.fahrenheitToKelvin(fahrenheits);
                                             System.out.println("Result: " + result);
                                             break;
                                 case 5:
@@ -246,8 +246,8 @@ system.out.println("27.area of cylinder");
                                             break; 
                                 case 6:
                                        System.out.println("Enter number in kelvin:");
-                                            double kelvin = scanner.nextDouble();
-                                            result = calculator.kelvinToFahrenheit(kelvin);
+                                            double kelvins = scanner.nextDouble();
+                                            result = calculator.kelvinToFahrenheit(kelvins);
                                             System.out.println("Result: " + result);
                                             break;
                                 case 0:
@@ -267,8 +267,8 @@ system.out.println("27.area of cylinder");
                     break;
                     
                 case 9:
-                      boolean exit = false;
-                        while (!exit) {
+                exits= false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert second to millisecond");
                             System.out.println("2. convert seconds to Minutes");
@@ -288,8 +288,8 @@ system.out.println("27.area of cylinder");
                                             break; 
                                 case 2:
                                        System.out.println("Enter number in second:");
-                                            double second = scanner.nextDouble();
-                                            result = calculator.secondsToMinutes(second);
+                                            double seconds = scanner.nextDouble();
+                                            result = calculator.secondsToMinutes(seconds);
                                             System.out.println("Result: " + result);
                                             break; 
                                 case 3:
@@ -334,8 +334,8 @@ system.out.println("27.area of cylinder");
                         }
                                    
                 case 10:
-                     boolean exit = false;
-                        while (!exit) {
+                exits= false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert metersPerSecond to KilometersPerHour");
                             System.out.println("2. convert kilometersPerHour to MetersPerSecond");
@@ -378,8 +378,8 @@ system.out.println("27.area of cylinder");
                             break;    
                         }           
                  case 11:
-                           boolean exit = false;
-                        while (!exit) {
+                           exits= false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. convert degrees to Radians");
                             System.out.println("2. convert radians to Degrees");
@@ -420,7 +420,7 @@ system.out.println("27.area of cylinder");
                       System.out.println("Enter first number:");
                            double num3 = scanner.nextInt();
                            double num4 = scanner.nextInt();
-                       result = calculator.calculatesubtraction(n,r);
+                       result = calculator.calculatesubtraction(num3,num4);
                        System.out.println("Result: " + result);
                        break;
                                  
@@ -428,7 +428,7 @@ system.out.println("27.area of cylinder");
                        System.out.println("Enter first number:");
                            double num5 = scanner.nextInt();
                            double num6= scanner.nextInt();
-                       result = calculator.calculatemultiplication(n,r);
+                       result = calculator.calculatemultiplication(num5,num6);
                        System.out.println("Result: " + result);
                        break;
                    case 15:
@@ -463,7 +463,7 @@ system.out.println("27.area of cylinder");
                    case 19:
                           System.out.println("Enter radius:");
                                double radius = scanner.nextDouble();
-                               result = calculator.areaOfCircle(celsius);
+                               result = calculator.areaOfCircle(radius);
                                System.out.println("Result: " + result);
                            break;
                        
@@ -472,7 +472,7 @@ system.out.println("27.area of cylinder");
                                 double widthr2 = scanner.nextDouble();
                           System.out.println("enter height:");
                                double heightr2= scanner.nextDouble();
-                               result = calculator.perimeterOfRectangle(widthr,heightr);
+                               result = calculator.perimeterOfRectangle(widthr2,heightr2);
                           System.out.println("Result: " + result);
                       break;   
                    case 21:
@@ -484,12 +484,12 @@ system.out.println("27.area of cylinder");
                     case 22:
                          System.out.println("Enter radius:");
                              double radiusC = scanner.nextDouble();
-                             result = calculator.circumfrenceOfcircle(celsius);
+                             result = calculator.circumfrenceOfcircle(radiusC);
                          System.out.println("Result: " + result);
                         break;
                     case 23:
-                        boolean exit = false;
-                        while (!exit) {
+                         exits=false;
+                        while (!exits) {
                             System.out.println("Select an option:");
                             System.out.println("1. Calculate Sine");
                             System.out.println("2. Calculate Cosine");
@@ -576,16 +576,16 @@ system.out.println("27.area of cylinder");
                         break; 
 
 
- //prompt the user enter the radius and height of cylinder 
-                   case 27:
-System.out.println("enter the radius");
-          double radius=scanner.nextDouble();
-System.out.println("enter the height");
-       double height=scanner.nextDouble();
-     //calculate surface area cylinder 
-         double area=areaCylinder (height, radius);
-System.out.println("the area of cylinder is"+area);
-
+                             //prompt the user enter the radius and height of cylinder 
+                    case 27:
+                                System.out.println("enter the radius");
+                                        double radiuses=scanner.nextDouble();
+                                System.out.println("enter the height");
+                                    double heights=scanner.nextDouble();
+                                    //calculate surface area cylinder 
+                                        double areas = areaCylinder (heights, radiuses);
+                                System.out.println("the area of cylinder is"+areas);
+                                            break;
 
                    default:
                         System.out.println("Invalid choice. Please try again.");
@@ -594,5 +594,25 @@ System.out.println("the area of cylinder is"+area);
             scanner.nextLine();
         }
         scanner.close();
+    }
+
+    private static double areaCylinder(double height, double radius) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'areaCylinder'");
+    }
+
+    private static double perimeterOftriangle(double length1, double length2, double length3) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'perimeterOftriangle'");
+    }
+
+    private static double calculateArea(double side1, double side2, double side3) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    }
+
+    private static double calculateMedian(double[] numbers) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateMedian'");
     }
 }

@@ -1,21 +1,22 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Arrays;
 
 public class Calculator {
     //basic mathematical functions
-    public static double calculateaddition(double num1, double num2){
+    public double calculateaddition(double num1, double num2){
                   double summation=num1+num2;
                   return summation;
                   }
-    public static double calculatesubtraction(double num1, double num2){
+    public double calculatesubtraction(double num1, double num2){
                   double subtraction=num1-num2;
                   return subtraction;
                   }
-    public static double calculatemultiplication(double num1, double num2){
+    public double calculatemultiplication(double num1, double num2){
                   double multiplication=num1*num2;
                   return multiplication;
                   }
-    public static int calculatedivision(int num1, int num2){//if the nos are integer.
+    public int calculatedivision(int num1, int num2){//if the nos are integer.
                  if (num2==0) {
                      throw new IllegalArgumentException("any no cann't divid by zero,otherwise undefined");
                      //if the data type of the no is float no the result will be "INFINITY".
@@ -23,15 +24,15 @@ public class Calculator {
                   int division=num1/num2;
                   return division;
                  }
-    public static double calculatedivision(double num1, double num2){//if the nos are float.
+    public double calculatedivision(double num1, double num2){//if the nos are float.
                  double division=num1/num2;
                  return division;
                }
                //body mass index tip
-    public static double bodyMassIndex(double weight,double height){
+    public double bodyMassIndex(double weight,double height){
                 double BMI=(weight/Math.pow(height,2));
                 if (BMI<0.0){
-                    throw new IllegalArgumentException("Tbmi cann't be negative");
+                    throw new IllegalArgumentException("Cann't be negative");
                 }
                 if(BMI<18.0){
                      return -1.0;//underweight
@@ -45,20 +46,20 @@ public class Calculator {
             return BMI;
             }
    //shapes area computation
-    public static double areaOfRectangle(double width,double height){
+    public double areaOfRectangle(double width,double height){
                double areaR=width*height;
                return areaR;
     }
-    public static double areaOfSquare(double length){
+    public double areaOfSquare(double length){
         double areaS=Math.pow(length,2);
         return areaS;
     }  
-    public static double areaOfCircle(double radius){
+    public double areaOfCircle(double radius){
         double areaC=Math.PI*Math.pow(radius, 2);
         return areaC;
     }
      // Function to calculate the area of a triangle
-    public static double calculateArea(double base, double height) {
+    public double calculateArea(double base, double height) {
         if (base <= 0 || height <= 0) {
             throw new IllegalArgumentException("Base and height must be positive numbers.");
         }
@@ -67,53 +68,55 @@ public class Calculator {
   
   
     //cercumstance of shapes
-    public static double perimeterOfRectangle(double width,double height){
+    public double perimeterOfRectangle(double width,double height){
         double cercumstanceR=2*(width+height);
               return cercumstanceR;
          }
-         public static double perimeterOfSquare(double length){
+         public double perimeterOfSquare(double length){
           double perimeterS=4*(length);
           return perimeterS;
          }  
-         public static double circumfrenceOfcircle(double radius){
+         public double circumfrenceOfcircle(double radius){
           double circumfrenceC=2*radius*Math.PI;
           return circumfrenceC;
          } 
-         public static double perimeterOftriangle(double length1,double length2,double length3) {
+         public double perimeterOftriangle(double length1,double length2,double length3) {
             double perimeterT=length1+length2+length3;
             return perimeterT;
          }
-    }    
+      
 
 
     //Trigonometric calculations
-    public static double sine(double angleInDegrees) {
+    public double sine(double angleInDegrees) {
         return Math.sin(Math.toRadians(angleInDegrees));
     }    
-    public static double cosine(double angleInDegrees) {
+    public double cosine(double angleInDegrees) {
         return Math.cos(Math.toRadians(angleInDegrees));
     }
-    public static double tangent(double angleInDegrees) {
+    public double tangent(double angleInDegrees) {
         return Math.tan(Math.toRadians(angleInDegrees));
     }
                 //Median
-    public static double calculateMedian(int[] , numbers) {
-        // Sort the array
-        arrays.sort(numbers);        
-        int length = numbers.length;
-        double median;
-        if (length % 2 == 0) {
-        // If the array length is even, average the middle two numbers
-        median = (double) (numbers[length / 2 - 1] + numbers[length / 2]) / 2;
-        } else {
-        // If the array length is odd, take the middle number
-        median = numbers[length / 2];
-        }
-        return median;
-    }
+             
+                public double calculateMedian(int[] numbers) {
+                    // Sort the array
+                    Arrays.sort(numbers);        
+                    int length = numbers.length;
+                    double median;
+                    if (length % 2 == 0) {
+                        // If the array length is even, average the middle two numbers
+                        median = (double) (numbers[length / 2 - 1] + numbers[length / 2]) / 2;
+                    } else {
+                        // If the array length is odd, take the middle number
+                        median = numbers[length / 2];
+                    }
+                    return median;
+                }
+                
 
                 //Factorial
-    public static int calculateFactorial(int n) {
+    public int calculateFactorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
         }
@@ -129,7 +132,7 @@ public class Calculator {
 
 
               //Permutation
-    public static int calculatePermutation(int n, int r) {
+    public int calculatePermutation(int n, int r) {
         if (n < 0 || r < 0) {
             throw new IllegalArgumentException("Permutation is not defined for negative numbers.");
         }
@@ -140,7 +143,7 @@ public class Calculator {
     }
 
             //Combination
-    public static int calculateCombination(int n, int r) {
+    public int calculateCombination(int n, int r) {
         if (n < 0 || r < 0) {
             throw new IllegalArgumentException("Combination is not defined for negative numbers.");
         }
@@ -153,7 +156,7 @@ public class Calculator {
 
 
 
-    private static int factorial(int n) {
+    private int factorial(int n) {
         if (n == 0 || n == 1) {
             return 1;
         }
@@ -168,120 +171,120 @@ public class Calculator {
     // UNIT CONVERSION
     
                   //  Length Converter 
-        public static double meterToCentimeter(double meter) {
+        public double meterToCentimeter(double meter) {
                          return meter * 100;
                    }
     
-        public static double centimeterToMeter(double centimeter) {
+        public double centimeterToMeter(double centimeter) {
             return centimeter / 100;
         }
 
         // Area Converter
-            public static double squareMeterToSquareCentimeter(double squareMeter) {
+            public double squareMeterToSquareCentimeter(double squareMeter) {
                 return squareMeter * 10000;
             }
         
-            public static double squareCentimeterToSquareMeter(double squareCentimeter) {
+            public double squareCentimeterToSquareMeter(double squareCentimeter) {
                 return squareCentimeter / 10000;
             }
         
         // Volume Converter
-                public static double cubicMeterToCubicCentimeter(double cubicMeter) {
+                public double cubicMeterToCubicCentimeter(double cubicMeter) {
                     return cubicMeter * 1e6;
                 }
             
-                public static double cubicCentimeterToCubicMeter(double cubicCentimeter) {
+                public double cubicCentimeterToCubicMeter(double cubicCentimeter) {
                     return cubicCentimeter / 1e6;
                 }
 
         // Mass Converter
-                    public static double kilogramToGram(double kilogram) {
+                    public double kilogramToGram(double kilogram) {
                         return kilogram * 1000;
                     }
                 
-                    public static double gramToKilogram(double gram) {
+                    public double gramToKilogram(double gram) {
                         return gram / 1000;
                     }
 
          // Temperature Converter
-                        public static double celsiusToFahrenheit(double celsius) {
+                        public double celsiusToFahrenheit(double celsius) {
                             return (celsius * 9 / 5) + 32;
                         }
                     
-                        public static double celsiusToKelvin(double celsius) {
+                        public double celsiusToKelvin(double celsius) {
                             return celsius + 273.15;
                         }
                     
-                        public static double fahrenheitToCelsius(double fahrenheit) {
+                        public double fahrenheitToCelsius(double fahrenheit) {
                             return (fahrenheit - 32) * 5 / 9;
                         }
                     
-                        public static double fahrenheitToKelvin(double fahrenheit) {
+                        public double fahrenheitToKelvin(double fahrenheit) {
                             return (fahrenheit + 459.67) * 5 / 9;
                         }
                     
-                        public static double kelvinToCelsius(double kelvin) {
+                        public double kelvinToCelsius(double kelvin) {
                             return kelvin - 273.15;
                         }
                     
-                        public static double kelvinToFahrenheit(double kelvin) {
+                        public double kelvinToFahrenheit(double kelvin) {
                             return (kelvin * 9 / 5) - 459.67;
                         }
             
 
          // Time Converter
-                            public static double secondsToMilliseconds(double seconds) {
+                            public double secondsToMilliseconds(double seconds) {
                                 return seconds * 1000;
                             }
                         
-                            public static double secondsToMinutes(double seconds) {
+                            public double secondsToMinutes(double seconds) {
                                 return seconds / 60;
                             }
                         
-                            public static double minutesToSeconds(double minutes) {
+                            public double minutesToSeconds(double minutes) {
                                 return minutes * 60;
                             }
                         
-                            public static double hoursToMinutes(double hours) {
+                            public double hoursToMinutes(double hours) {
                                 return hours * 60;
                             }
                         
-                            public static double daysToHours(double days) {
+                            public double daysToHours(double days) {
                                 return days * 24;
                             }
                         
-                            public static double weeksToDays(double weeks) {
+                            public double weeksToDays(double weeks) {
                                 return weeks * 7;
                             }
                         
-                            public static double yearsToDays(double years) {
+                            public double yearsToDays(double years) {
                                 return years * 365.25; // Allowing for leap years
                             }
                         
       
         // SpeedConverter
-                                public static double metersPerSecondToKilometersPerHour(double metersPerSecond) {
+                                public double metersPerSecondToKilometersPerHour(double metersPerSecond) {
                                     return metersPerSecond * 3.6;
                                 }
                             
-                                public static double kilometersPerHourToMetersPerSecond(double kilometersPerHour) {
+                                public double kilometersPerHourToMetersPerSecond(double kilometersPerHour) {
                                     return kilometersPerHour / 3.6;
                                 }
                             
-                                public static double milesPerHourToKilometersPerHour(double milesPerHour) {
+                                public double milesPerHourToKilometersPerHour(double milesPerHour) {
                                     return milesPerHour * 1.60934;
                                 }
                             
-                                public static double kilometersPerHourToMilesPerHour(double kilometersPerHour) {
+                                public double kilometersPerHourToMilesPerHour(double kilometersPerHour) {
                                     return kilometersPerHour / 1.60934;
                                 }
 
         // AngleConverter
-                                    public static double degreesToRadians(double degrees) {
+                                    public double degreesToRadians(double degrees) {
                                         return degrees * Math.PI / 180;
                                     }
                                 
-                                    public static double radiansToDegrees(double radians) {
+                                    public double radiansToDegrees(double radians) {
                                         return radians * 180 / Math.PI;
                                     }
 
@@ -314,31 +317,31 @@ public class Calculator {
 
         //Inverse of Trignometric functions 
     
-        public static double inverseSin(double value) {
+        public double inverseSin(double value) {
             return Math.asin(value);
         }
     
-        public static double inverseCos(double value) {
+        public double inverseCos(double value) {
             return Math.acos(value);
         }
     
-        public static double inverseTan(double value) {
+        public double inverseTan(double value) {
             return Math.atan(value);
         }
     
-        public static double inverseSec(double value) {
+        public double inverseSec(double value) {
             return 1 / Math.acos(value);
         }
     
-        public static double inverseCot(double value) {
+        public double inverseCot(double value) {
             return 1 / Math.atan(value);
         }
-        public static double inverseCsc(double value) {
+        public double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
 
         //function that calculates range function
-        public static int calculateRange(int[] numbers) {
+        public int calculateRange(int[] numbers) {
             if (numbers == null || numbers.length == 0) {
                 return 0;
             }
@@ -360,7 +363,7 @@ public class Calculator {
 
           // Remainder
 
-    public static int calculateRemainder(int dividend, int divisor) {
+    public int calculateRemainder(int dividend, int divisor) {
         if (divisor == 0) {
             throw new IllegalArgumentException("Cannot divide by zero");
         }
@@ -368,7 +371,7 @@ public class Calculator {
     }
     
           //mean    
-    public static double calculateMean(int[] numbers) {
+    public double calculateMean(int[] numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be empty");
         }
@@ -384,13 +387,13 @@ public class Calculator {
 
 
             // Absolute value
-    public static int absolute(int num) {
+    public int absolute(int num) {
         return num >= 0 ? num : -num;
     }
 
            // Mode
 
-    public static int findMode(int[] nums) {
+    public int findMode(int[] nums) {
         if (nums == null || nums.length == 0) {
             throw new IllegalArgumentException("Array is empty or null");
         }
@@ -429,12 +432,12 @@ public class Calculator {
         return Math.pow(base, value); }
 
               // arae Cylinder 
-    public double areaCylinder() {
+    public double areaCylinder(double radius, double height) {
         return 2 * Math.PI * radius * (radius + height);
              }
 
                  // GCD
-    public static int findGCD(int a, int b) {
+    public int findGCD(int a, int b) {
         // Ensure a is greater than or equal to b
         if (a < b) {
             int temp = a;
@@ -451,7 +454,7 @@ public class Calculator {
         return a;
                          } 
             //LCM
-    public static int findLCM(int a, int b) {
+    public int findLCM(int a, int b) {
         // Ensure a is greater than or equal to b
         if (a < b) {
             int temp = a;
@@ -460,10 +463,10 @@ public class Calculator {
         }
 
         // LCM is (a * b) / GCD(a, b)
-        return (a / GCD.findGCD(a, b)) * b;
+        return (a / findGCD(a, b)) * b;
     }
               //percentage
-    public static double calculatePercentage(double number, double total) {
+    public double calculatePercentage(double number, double total) {
         if (total == 0) {
             throw new IllegalArgumentException("Total cannot be zero");
         }
@@ -473,7 +476,7 @@ public class Calculator {
     }
 
         //Fiabonacci series
-public static int calculateNthFibonacci(int n) {
+public int calculateNthFibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Fibonacci sequence is not defined for negative numbers");
         }
@@ -497,11 +500,18 @@ public static int calculateNthFibonacci(int n) {
         }
         return fib;
     }
-
-
-
-
-  
+public double circumferenceOfCircle(double d) {
+	// TODO Auto-generated method stub
+	throw new UnsupportedOperationException("Unimplemented method 'circumferenceOfCircle'");
+}
+public double calculateAntiln(int i) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'calculateAntiln'");
+}
+public double surfaceArea() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'surfaceArea'");
+} 
 }//End 
 
     
